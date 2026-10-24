@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#d3e4fe","tertiary-fixed-dim":"#80d5cb","on-surface-variant":"#3d4947","on-primary-fixed":"#00201d","error-container":"#ffdad6","inverse-primary":"#6bd8cb","outline":"#6d7a77","on-secondary-fixed":"#001d31","surface-container-high":"#dce9ff","on-secondary":"#ffffff","on-error":"#ffffff","on-tertiary-container":"#f3fffc","surface-container-low":"#eff4ff","secondary":"#006398","surface-container":"#e5eeff","on-primary-fixed-variant":"#005049","on-surface":"#0b1c30","surface-bright":"#f8f9ff","on-background":"#0b1c30","primary":"#00685f","surface-tint":"#006a61","primary-container":"#008378","on-tertiary-fixed":"#00201d","on-secondary-container":"#00476e","tertiary-fixed":"#9cf2e8","on-secondary-fixed-variant":"#004b73","primary-fixed-dim":"#6bd8cb","surface":"#f8f9ff","on-tertiary":"#ffffff","outline-variant":"#bcc9c6","on-primary":"#ffffff","primary-fixed":"#89f5e7","background":"#f8f9ff","surface-container-lowest":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","error":"#ba1a1a","surface-dim":"#cbdbf5","secondary-fixed":"#cce5ff","tertiary-container":"#248279","tertiary":"#006860","on-tertiary-fixed-variant":"#00504a","secondary-container":"#5bb8fe","inverse-surface":"#213145","on-primary-container":"#f4fffc","secondary-fixed-dim":"#93ccff","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1.5rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"body-md":["Inter"],"display-sm":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"headline-lg":["Inter"],"code":["JetBrains Mono"],"headline-sm":["Inter"],"label-sm":["JetBrains Mono"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-sm":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"code":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-md bg-surface-container-lowest/5"><img alt="Optiqo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHMuD3UGToF3fAp2yWQIXT1ltmrMo3v5wsOB5_QnoHFzFqbUCicttGrFADK_iqrs5yZu4u1E7CDKlTziQ0avIwqJeyZUjfgKQTpHp0IfdJikhylM7IuNTHaddQwCdbq3HBWnDkiwsf7jsxjBUzrkQYiylqfeMUjCa4y8ebybSnO1_14I3khPzGvHDj6X7Z6qnPJtbANsdVVy6Dvf6hyhT6P2TfU1ghETFhpCK9vZXjRpPxcNLymtkvBbQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">Optiqo</span><span class="font-label-sm text-label-sm text-outline-variant mt-0.5 tracking-wide uppercase">Distribution Intelligence</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Operational Modules</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary text-on-primary font-body-lg rounded"><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="data-and-validation" href="#">Data &amp; Validation</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="risk-overview" href="#">Risk Overview</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="allocation-plan" href="#">Allocation Plan</a><a aria-current="page" class="flex items-center px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-lg rounded" data-path="recommendation-detail" href="#">Recommendation Detail</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="backtest" href="#">Backtest</a></nav></div><div class="p-space-md bg-surface-container-lowest/5 flex flex-col gap-space-xs font-label-sm text-label-sm text-outline-variant"><div class="flex items-center justify-between"><span class="text-inverse-on-surface/70 font-semibold">Optiqo Engine</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-code text-[10px]">v1.4.2-st</span></div><div class="flex items-center justify-between text-inverse-on-surface/50 text-[11px]"><span>Enterprise Suite</span><span class="font-medium text-inverse-on-surface/80">Team VYROX</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest z-40 px-space-xl flex items-center justify-between shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface"><span class="text-on-surface-variant font-body-md text-body-md">Operations</span><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span><span>Recommendation Detail</span></div><div class="h-4 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">database</span><span class="font-code">Dataset: Global_Retail_Q3_Simulated</span></div><span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wide">[SIMULATED DATA]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-outline">event_repeat</span><span class="font-medium">Cycle: FY25-W18 / 2025-W18</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span>Last run: Complete</span></div></div><div class="h-5 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Operations Planner</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Global Supply Chain</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-xl py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full">
+<!-- Operational Breadcrumbs & Context Control Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-body-sm" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_back</span>
+<span>Back to Allocation Plan</span>
+</a>
+<span class="text-outline-variant font-label-sm">/</span>
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface">
+<span class="text-on-surface-variant font-code">Operations</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface-variant font-code">Allocation Plan</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code font-semibold text-primary">#DSP-2025-05-9921X</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm font-semibold tracking-wide">
+        [SIMULATED SOLVER TRACE]
+      </span>
+</div>
+<!-- Recommendation Pager -->
+<div class="flex items-center gap-space-xs self-start md:self-auto bg-surface-container-lowest px-2 py-1 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-1.5">Trace Switcher</span>
+<div class="h-3.5 w-px bg-surface-container-high"></div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Previous Recommendation">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-code font-semibold text-body-sm text-on-surface">
+        LOT-2025-A89 • Rec 03 of 18
+      </span>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Next Recommendation">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Primary Identity Card -->
+<div class="bg-surface-container-lowest rounded shadow-sm mb-space-md overflow-hidden">
+<!-- Header strip -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface">SKU-9921-X</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Cold-Chain Reagent Pack v3</span>
+<span class="px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm font-semibold">Thermolabile Class 2–8°C</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+              FEFO Priority: Rank #1
+            </span>
+</div>
+<div class="flex items-center gap-space-md mt-1 text-on-surface-variant font-label-sm flex-wrap">
+<span class="font-code">Lot ID: <span class="text-on-surface font-semibold">LOT-2025-A89</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">warehouse</span>
+              Origin: Newport Park, NJ (<span class="font-code font-medium">DC-East-02</span>)
+            </span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">arrow_forward</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_shipping</span>
+              Destination: Allentown, PA (<span class="font-code font-medium">DC-East-01</span>)
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Manual Override</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Audit Log</span>
+</button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-body-sm font-semibold transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Approve for WMS</span>
+</button>
+</div>
+</div>
+<!-- KPI Metric Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 p-space-md gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col p-space-sm rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Proposed Transfer</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-sm text-display-sm text-on-surface">+1,200</span>
+<span class="font-label-md text-label-md text-on-surface-variant">units</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">6 passive reefer pallets</span>
+</div>
+<div class="flex flex-col p-space-sm rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scheduled Delivery</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">May 15 • 08:30</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">UTC</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">18h lead • PolarLogix #41</span>
+</div>
+<div class="flex flex-col p-space-sm rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Landed Freight Cost</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-sm text-display-sm text-on-surface">$1,420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code">USD</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-0.5">$1.18/unit consolidated LTL</span>
+</div>
+<div class="flex flex-col p-space-sm rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Freshness at Arrival</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-sm text-display-sm text-primary">61 Days</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold mt-0.5">+31d above hospital SLA</span>
+</div>
+<div class="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col p-space-sm rounded bg-surface-container-low justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Constraint Engine</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-primary">PASSED</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Zero negative-stock violation</span>
+</div>
+</div>
+</div>
+<!-- Main Analytical 2-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-md">
+<!-- LEFT COLUMN: Section A & B (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Section A: Demand Forecast Chart -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col">
+<div class="flex items-start justify-between mb-space-sm flex-wrap gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code font-bold text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary">SEC A</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Demand Forecast &amp; Consumption Trajectory</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">7-Day probabilistic hospital draw at DC-East-01 (Allentown) vs. safety buffers</p>
+</div>
+<div class="flex items-center gap-3 font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-error"></span>
+<span class="text-on-surface-variant">Baseline (Deficit)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-primary rounded-full"></span>
+<span class="text-on-surface-variant">With Transfer (+1.2k)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-2 bg-primary/20 rounded"></span>
+<span class="text-on-surface-variant">90% CI</span>
+</div>
+</div>
+</div>
+<!-- Inline Plotly-Style SVG Canvas -->
+<div class="relative w-full h-[220px] bg-surface-container-low/40 rounded p-3 flex flex-col justify-between overflow-hidden">
+<!-- Background Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between p-4 pointer-events-none opacity-40">
+<div class="border-b border-outline-variant/30 w-full h-0"></div>
+<div class="border-b border-outline-variant/30 w-full h-0"></div>
+<div class="border-b border-outline-variant/30 w-full h-0"></div>
+<div class="border-b border-outline-variant/30 w-full h-0"></div>
+</div>
+<!-- SVG Visual Representation -->
+<svg class="w-full h-full relative z-10" preserveaspectratio="none" viewbox="0 0 650 180">
+<!-- Safety Threshold 1,800 units horizontal reference -->
+<line opacity="0.6" stroke="#6d7a77" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="630" y1="65" y2="65"></line>
+<text class="font-label-sm" fill="#6d7a77" font-size="10" x="45" y="60">Target Buffer (1,800u)</text>
+<!-- Zero Stock line -->
+<line opacity="0.4" stroke="#ba1a1a" stroke-dasharray="2,2" stroke-width="1" x1="40" x2="630" y1="155" y2="155"></line>
+<text class="font-label-sm" fill="#ba1a1a" font-size="10" x="540" y="150">Zero Inventory (Depletion)</text>
+<!-- Confidence Interval polygon (soft teal) -->
+<polygon fill="rgba(0, 104, 95, 0.12)" points="
+              40,75
+              130,70
+              220,68
+              310,65
+              400,60
+              500,58
+              610,62
+              610,95
+              500,90
+              400,96
+              310,102
+              220,100
+              130,95
+              40,90"></polygon>
+<!-- Baseline without transfer (Plunges to 0 at Day 1.8) -->
+<path d="M 40,88 Q 110,120 150,155 T 220,155 L 610,155" fill="none" stroke="#ba1a1a" stroke-linecap="round" stroke-width="2.2"></path>
+<!-- Stockout point marker -->
+<circle cx="150" cy="155" fill="#ba1a1a" r="4.5"></circle>
+<rect fill="#ffdad6" height="26" rx="3" width="138" x="156" y="125"></rect>
+<text class="font-label-sm font-semibold" fill="#93000a" font-size="10.5" x="162" y="142">Critical Deficit: Day 1.8 (-42u)</text>
+<!-- Post-Transfer trajectory (+1,200u at day 1 arrival) -->
+<path d="M 40,88 L 120,110 L 125,40 Q 220,48 310,55 T 450,50 T 610,64" fill="none" stroke="#00685f" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Inbound arrival marker -->
+<circle cx="125" cy="40" fill="#00685f" r="5"></circle>
+<text class="font-label-sm font-bold" fill="#00685f" font-size="11" x="135" y="36">+1,200u Inbound (08:30)</text>
+<!-- Axis Labels & Day markers -->
+<g class="font-label-sm" fill="#3d4947" font-size="10">
+<text x="40" y="174">May 14</text>
+<text x="130" y="174">May 15 (Arr)</text>
+<text x="220" y="174">May 16</text>
+<text x="310" y="174">May 17</text>
+<text x="400" y="174">May 18 (Surge)</text>
+<text x="500" y="174">May 19</text>
+<text x="590" y="174">May 20</text>
+</g>
+</svg>
+</div>
+<!-- Consumption Distribution Table Summary -->
+<div class="grid grid-cols-7 gap-1 mt-space-sm text-center font-label-sm">
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D1 (May 14)</span>
+<span class="font-code font-semibold text-on-surface">240u</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D2 (May 15)</span>
+<span class="font-code font-semibold text-on-surface">280u</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D3 (May 16)</span>
+<span class="font-code font-semibold text-on-surface">310u</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D4 (May 17)</span>
+<span class="font-code font-semibold text-on-surface">290u</span>
+</div>
+<div class="bg-surface-container-high p-1.5 rounded">
+<span class="text-primary block font-semibold text-[10px]">D5 (Surge)</span>
+<span class="font-code font-bold text-primary">350u</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D6 (May 19)</span>
+<span class="font-code font-semibold text-on-surface">220u</span>
+</div>
+<div class="bg-surface-container-low p-1.5 rounded">
+<span class="text-on-surface-variant block text-[10px]">D7 (May 20)</span>
+<span class="font-code font-semibold text-on-surface">190u</span>
+</div>
+</div>
+<!-- Demand Signal Explain Box -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">psychology</span>
+<div class="text-on-surface font-body-sm">
+<span class="font-semibold text-primary">Model Signal:</span>
+            Ensemble Gradient Boosted Trees (<span class="font-code text-on-surface">XGB-Forecaster v3.2</span>) detected a
+            <strong class="text-on-surface">+28% demand spike</strong> driven by Regional Clinical Trial Protocol W18 at St. Luke's Health Network.
+            Mean absolute error across 14d rolling validation: <span class="font-code font-semibold">4.8%</span>.
+          </div>
+</div>
+</div>
+<!-- Section B: Inventory Freshness & FEFO Compliance -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col">
+<div class="flex items-start justify-between mb-space-sm flex-wrap gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code font-bold text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary">SEC B</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Inventory Freshness &amp; FEFO Compliance</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Origin batch clearance, shelf-life runway, and hospital receipt window</p>
+</div>
+<span class="px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+            FEFO Verification: Optimal Rank #1
+          </span>
+</div>
+<!-- Visual Freshness Runway Bar -->
+<div class="bg-surface-container-low p-space-md rounded mb-space-sm">
+<div class="flex items-center justify-between text-on-surface font-label-sm mb-2">
+<span class="font-medium text-on-surface-variant">Batch Timeline (LOT-2025-A89)</span>
+<span class="font-code text-primary font-semibold">61 Days remaining at receipt</span>
+</div>
+<div class="w-full h-7 bg-surface-container rounded-sm relative overflow-hidden flex">
+<!-- Elapsed Shelf Life -->
+<div class="h-full bg-surface-dim flex items-center justify-center text-on-surface-variant text-[11px] font-label-sm" style="width: 32%;">
+              Manufactured (Jan 15)
+            </div>
+<!-- In-Transit window -->
+<div class="h-full bg-secondary-container flex items-center justify-center text-on-secondary-container text-[11px] font-label-sm font-medium" style="width: 8%;">
+              Transit (18h)
+            </div>
+<!-- Usable Clinical Window before SLA Gate -->
+<div class="h-full bg-primary/25 flex items-center justify-center text-primary text-[11px] font-label-sm font-bold" style="width: 35%;">
+              Clinical Use Window (31 Days Buffer)
+            </div>
+<!-- Minimum Hospital SLA Gate (30d) -->
+<div class="h-full bg-error-container flex items-center justify-center text-on-error-container text-[11px] font-label-sm font-semibold" style="width: 25%;">
+              Min SLA Gate (30 Days)
+            </div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm text-outline mt-1.5 px-0.5">
+<span>Prod: Jan 15, 2025</span>
+<span class="font-medium text-on-surface">Arrival: May 15, 2025 (DC-East-01)</span>
+<span class="text-error font-medium">Cutoff SLA: Jun 15</span>
+<span>Expiry: Jul 15, 2025</span>
+</div>
+</div>
+<!-- Shelf life parameter cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-space-sm font-label-sm">
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="text-on-surface-variant uppercase text-[10px] block">Origin Usable Stock</span>
+<span class="font-code font-bold text-headline-sm text-on-surface">3,450 u</span>
+<span class="text-[11px] text-outline block mt-0.5">DC-East-02 Newport Park</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="text-on-surface-variant uppercase text-[10px] block">Origin Inbound Supply</span>
+<span class="font-code font-bold text-headline-sm text-on-surface">+1,200 u</span>
+<span class="text-[11px] text-primary block mt-0.5">Arriving May 18 (Mfg)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low">
+<span class="text-on-surface-variant uppercase text-[10px] block">Hospital SLA Margin</span>
+<span class="font-code font-bold text-headline-sm text-primary">+31 Days</span>
+<span class="text-[11px] text-on-surface-variant block mt-0.5">Req: 30d • Actual: 61d</span>
+</div>
+</div>
+<!-- Note on Alternative Lot -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded font-body-sm text-on-surface-variant flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">info</span>
+<div>
+<strong class="text-on-surface">FEFO Gate Validation:</strong> Alternative lot
+            <span class="font-code font-semibold text-on-surface">LOT-2025-K11</span> (Exp: Aug 28, 2025) was evaluated at DC-East-02 but held in reserve to prioritize older stock
+            <span class="font-code font-semibold text-on-surface">LOT-2025-A89</span>, preventing $4,850 in potential Q3 write-offs.
+          </div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Section C & D (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Section C: Alternative Allocation Analysis -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col">
+<div class="flex items-start justify-between mb-space-sm flex-wrap gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code font-bold text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary">SEC C</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Alternative Fulfillment Corridors</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Next-best eligible origin corridors evaluated by MILP</p>
+</div>
+</div>
+<!-- Comparison Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Option 1: Selected (Optimal) -->
+<div class="p-space-sm rounded bg-surface-container-high/40 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-lg font-bold text-on-surface">Option 1: Newport Park (DC-02)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm font-semibold">SELECTED</span>
+</div>
+<div class="grid grid-cols-4 gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<div>Dist: <span class="text-on-surface font-code font-medium">94 mi</span></div>
+<div>Freight: <span class="text-on-surface font-code font-bold">$1,420</span></div>
+<div>Lead: <span class="text-on-surface font-code font-medium">18h</span></div>
+<div>Score: <span class="text-primary font-code font-bold">94.2/100</span></div>
+</div>
+<div class="text-[12px] font-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">check</span>
+<span>Optimal landed cost • 10.2h before projected hospital stockout</span>
+</div>
+</div>
+<!-- Option 2: Columbus (DC-Cent-04) -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1.5 opacity-90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-body-md font-semibold text-on-surface">Option 2: Columbus (DC-Cent-04)</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm">REJECTED</span>
+</div>
+<div class="grid grid-cols-4 gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<div>Dist: <span class="text-on-surface font-code">412 mi</span></div>
+<div>Freight: <span class="text-error font-code font-semibold">$2,850</span></div>
+<div>Lead: <span class="text-on-surface font-code">28h (+10h)</span></div>
+<div>Score: <span class="text-on-surface font-code">71.0</span></div>
+</div>
+<div class="text-[11px] font-body-sm text-on-surface-variant">
+<span class="text-error font-medium">Rejection Reason:</span> +$1,430 freight penalty; would deplete Columbus buffer prior to W19 regional intake.
+            </div>
+</div>
+<!-- Option 3: Memphis (DC-South-02) -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1.5 opacity-90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-body-md font-semibold text-on-surface">Option 3: Memphis (DC-South-02)</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm">DISQUALIFIED</span>
+</div>
+<div class="grid grid-cols-4 gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<div>Dist: <span class="text-on-surface font-code">860 mi</span></div>
+<div>Freight: <span class="text-error font-code font-semibold">$4,100</span></div>
+<div>Lead: <span class="text-error font-code font-semibold">42h (+24h)</span></div>
+<div>Score: <span class="text-on-surface font-code">38.4</span></div>
+</div>
+<div class="text-[11px] font-body-sm text-on-surface-variant">
+<span class="text-error font-medium">Constraint Violation:</span> 42h transit violates the strict 36h thermal excursion limit for passive containers.
+            </div>
+</div>
+</div>
+<div class="mt-space-sm p-space-sm rounded bg-surface-container font-body-sm text-on-surface">
+<span class="font-semibold text-primary">Preference Rationale:</span> Newport Park (DC-East-02) delivers lowest freight rate while satisfying FEFO priority without cannibalizing origin inventory safety stock.
+        </div>
+</div>
+<!-- Section D: Mathematical Traceability & Binding Constraints -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col flex-1">
+<div class="flex items-start justify-between mb-space-sm flex-wrap gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-code font-bold text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary">SEC D</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Binding Constraints &amp; Solvers</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Mathematical optimality proof and model parameters</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm flex-1">
+<!-- Card 1: Active Constraints -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm font-semibold text-on-surface uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">lock</span>
+              Active Binding Constraints
+            </span>
+<div class="space-y-1.5 mt-1 font-body-sm text-[12px]">
+<div class="flex items-start justify-between">
+<span class="text-on-surface-variant">Safety Stock Target Floor:</span>
+<span class="font-code font-semibold text-on-surface">I(t=2) ≥ 1,800u</span>
+</div>
+<div class="text-[11px] font-code text-on-surface-variant pl-2">
+                → Shadow Price: -$42.50 / unit deficit penalty
+              </div>
+<div class="flex items-start justify-between">
+<span class="text-on-surface-variant">Reefer Pallet Slot Utilization:</span>
+<span class="font-code font-semibold text-primary">92.4% (Bound)</span>
+</div>
+<div class="flex items-start justify-between">
+<span class="text-on-surface-variant">Max Allowed Thermal Transit:</span>
+<span class="font-code font-semibold text-on-surface">≤ 24.0h Passive</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Model & Solver Stats -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm font-semibold text-on-surface uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[15px]">memory</span>
+              Solver Telemetry
+            </span>
+<div class="grid grid-cols-2 gap-2 mt-1 text-[11px] font-label-sm">
+<div>
+<span class="text-on-surface-variant block text-[10px]">OPTIMIZER</span>
+<span class="font-code text-on-surface font-medium">GLPK MILP v5.2</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px]">FEASIBILITY GAP</span>
+<span class="font-code text-primary font-bold">0.00% (Global Opt)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px]">SOLVE DURATION</span>
+<span class="font-code text-on-surface font-medium">14.8 seconds</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px]">VALIDATION CODE</span>
+<span class="font-code text-on-surface font-medium">chk-deterministic-0</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Caveat & Unmodeled Assumptions -->
+<div class="p-space-sm rounded bg-surface-container-high/30 flex flex-col gap-1 text-[11px] font-body-sm text-on-surface-variant mt-auto">
+<span class="font-label-sm font-semibold text-on-surface uppercase tracking-wider text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[14px]">warning</span>
+              Model Limitations &amp; Caveats
+            </span>
+<ul class="list-disc pl-4 space-y-0.5 text-[11px]">
+<li>Road weather telemetry: <em>Not available (historical matrix applied)</em></li>
+<li>Hospital return rate: <em>Assumed 0.0% for Lot A89</em></li>
+<li>All metrics reflect simulated optimization outcomes for FY25-W18.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Operational Workflow & Confirmation Drawer Bar -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Recommendation Audit Complete</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-semibold">Ready for Dispatch</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated against WMS manifest, DOT driver hours, and FEFO expiry rules.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<a class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium transition-colors" href="#">
+        Back to Plan
+      </a>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">exposure</span>
+<span>What-If (+/- 200u)</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Trace</span>
+</button>
+<button class="px-4 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-body-sm font-semibold transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Authorize Dispatch</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>

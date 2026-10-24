@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#d3e4fe","tertiary-fixed-dim":"#80d5cb","on-surface-variant":"#3d4947","on-primary-fixed":"#00201d","error-container":"#ffdad6","inverse-primary":"#6bd8cb","outline":"#6d7a77","on-secondary-fixed":"#001d31","surface-container-high":"#dce9ff","on-secondary":"#ffffff","on-error":"#ffffff","on-tertiary-container":"#f3fffc","surface-container-low":"#eff4ff","secondary":"#006398","surface-container":"#e5eeff","on-primary-fixed-variant":"#005049","on-surface":"#0b1c30","surface-bright":"#f8f9ff","on-background":"#0b1c30","primary":"#00685f","surface-tint":"#006a61","primary-container":"#008378","on-tertiary-fixed":"#00201d","on-secondary-container":"#00476e","tertiary-fixed":"#9cf2e8","on-secondary-fixed-variant":"#004b73","primary-fixed-dim":"#6bd8cb","surface":"#f8f9ff","on-tertiary":"#ffffff","outline-variant":"#bcc9c6","on-primary":"#ffffff","primary-fixed":"#89f5e7","background":"#f8f9ff","surface-container-lowest":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","error":"#ba1a1a","surface-dim":"#cbdbf5","secondary-fixed":"#cce5ff","tertiary-container":"#248279","tertiary":"#006860","on-tertiary-fixed-variant":"#00504a","secondary-container":"#5bb8fe","inverse-surface":"#213145","on-primary-container":"#f4fffc","secondary-fixed-dim":"#93ccff","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"1.5rem","gutter":"1rem","space-md":"0.75rem","gutter-dense":"0.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","space-lg":"1rem"},"fontFamily":{"body-md":["Inter"],"display-sm":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"label-md":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"headline-lg":["Inter"],"code":["JetBrains Mono"],"headline-sm":["Inter"],"label-sm":["JetBrains Mono"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-sm":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"16px","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"code":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-md bg-surface-container-lowest/5"><img alt="Optiqo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHMuD3UGToF3fAp2yWQIXT1ltmrMo3v5wsOB5_QnoHFzFqbUCicttGrFADK_iqrs5yZu4u1E7CDKlTziQ0avIwqJeyZUjfgKQTpHp0IfdJikhylM7IuNTHaddQwCdbq3HBWnDkiwsf7jsxjBUzrkQYiylqfeMUjCa4y8ebybSnO1_14I3khPzGvHDj6X7Z6qnPJtbANsdVVy6Dvf6hyhT6P2TfU1ghETFhpCK9vZXjRpPxcNLymtkvBbQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">Optiqo</span><span class="font-label-sm text-label-sm text-outline-variant mt-0.5 tracking-wide uppercase">Distribution Intelligence</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Operational Modules</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary text-on-primary font-body-lg rounded"><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="data-and-validation" href="#">Data &amp; Validation</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="risk-overview" href="#">Risk Overview</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="allocation-plan" href="#">Allocation Plan</a><a aria-current="page" class="flex items-center px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-lg rounded" data-path="recommendation-detail" href="#">Recommendation Detail</a><a class="flex items-center px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="backtest" href="#">Backtest</a></nav></div><div class="p-space-md bg-surface-container-lowest/5 flex flex-col gap-space-xs font-label-sm text-label-sm text-outline-variant"><div class="flex items-center justify-between"><span class="text-inverse-on-surface/70 font-semibold">Optiqo Engine</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-code text-[10px]">v1.4.2-st</span></div><div class="flex items-center justify-between text-inverse-on-surface/50 text-[11px]"><span>Enterprise Suite</span><span class="font-medium text-inverse-on-surface/80">Team VYROX</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest z-40 px-space-xl flex items-center justify-between shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface"><span class="text-on-surface-variant font-body-md text-body-md">Operations</span><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span><span>Recommendation Detail</span></div><div class="h-4 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">database</span><span class="font-code">Dataset: Global_Retail_Q3_Simulated</span></div><span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wide">[SIMULATED DATA]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-outline">event_repeat</span><span class="font-medium">Cycle: FY25-W18 / 2025-W18</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span>Last run: Complete</span></div></div><div class="h-5 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Operations Planner</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Global Supply Chain</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-xl py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top State Bar & Header Meta -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Backtest &amp; Policy Benchmark</h1>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Benchmark Evaluated (3/3 Complete)
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Algorithmic comparison under identical discrete event simulation traces across three execution architectures: fixed heuristic min-max baseline (<span class="font-code font-medium">B1</span>), forward-looking forecast with static buffers (<span class="font-code font-medium">B2</span>), and Optiqo multi-echelon mixed-integer allocation (<span class="font-code font-medium text-primary">MILP</span>).
+      </p>
+</div>
+<!-- Actions & Run Controls -->
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="h-8 px-space-md rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-semibold hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Config</span>
+</button>
+<button class="h-8 px-space-md rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-semibold hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="h-8 px-space-md rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Run Backtest</span>
+</button>
+</div>
+</div>
+<!-- Parameter Bar & Configuration Strip -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="md:col-span-4 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Evaluation Horizon</label>
+<div class="flex items-center justify-between h-8 px-2.5 rounded bg-surface-container-low font-body-sm text-body-sm text-on-surface font-medium">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">calendar_today</span>
+<span>Last 30 Days (Apr 15 - May 14, 2025)</span>
+</div>
+<span class="font-code text-[11px] text-on-surface-variant">720 intervals</span>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Simulation Seed &amp; Trace</label>
+<div class="flex items-center justify-between h-8 px-2.5 rounded bg-surface-container-low font-code text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">fingerprint</span>
+<span>seed_opt_88241_det</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-[10px] text-on-surface-variant">MT19937</span>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Objective Loss Weights</label>
+<div class="flex items-center justify-between h-8 px-2.5 rounded bg-surface-container-low font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">balance</span>
+<span>Stockout (<span class="font-code font-semibold">1.0x</span>) + Expiry (<span class="font-code font-semibold">1.0x</span>) + Freight (<span class="font-code font-semibold">0.7x</span>)</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold">Pareto Optimal</span>
+</div>
+</div>
+</div>
+<!-- Policy Specification Architectural Triad -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Policy B1 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-surface-variant"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-code text-label-sm text-on-surface font-bold">B1</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Static Min-Max</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[11px] font-medium">Historical Baseline</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Fixed <span class="font-code text-[11px] font-semibold">(s, S)</span> periodic inventory replenishment based on static 90-day averages. No forward-looking forecast integration. Lateral DC shipments trigger only upon hard local stockouts.
+      </p>
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low p-2 rounded">
+<div>Safety Buffer: <span class="font-semibold text-on-surface">Fixed 18d</span></div>
+<div>Coordination: <span class="font-semibold text-on-surface">Isolated DC</span></div>
+<div>Batch Routing: <span class="font-semibold text-on-surface">LIFO/Random</span></div>
+<div>Optimization: <span class="font-semibold text-on-surface">Rule-Based</span></div>
+</div>
+</div>
+<!-- Policy B2 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-secondary-fixed flex items-center justify-center font-code text-label-sm text-on-secondary-fixed font-bold">B2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Forecast-Informed</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-[11px] font-medium">Forward Demand ML</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Single-echelon rolling 14-day ML probabilistic forecast with localized safety stock scaling. Lacks global linear optimization, causing frequent regional inventory ping-ponging across distribution nodes.
+      </p>
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low p-2 rounded">
+<div>Safety Buffer: <span class="font-semibold text-on-surface">Dynamic Local</span></div>
+<div>Coordination: <span class="font-semibold text-on-surface">Point-to-Point</span></div>
+<div>Batch Routing: <span class="font-semibold text-on-surface">FEFO (Local)</span></div>
+<div>Optimization: <span class="font-semibold text-on-surface">Heuristic ML</span></div>
+</div>
+</div>
+<!-- Policy Optiqo -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-code text-label-sm font-bold">OPT</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Optiqo Multi-Echelon</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold tracking-wide">GLPK MILP Solver</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Global network optimization combining ensemble probabilistic demand distributions, multi-tier lead-time hedging, strict FEFO lot exhaustion, and consolidated multi-stop freight dispatching.
+      </p>
+<div class="mt-auto pt-2 grid grid-cols-2 gap-2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low p-2 rounded">
+<div>Safety Buffer: <span class="font-semibold text-primary">Pareto Sliced</span></div>
+<div>Coordination: <span class="font-semibold text-primary">Multi-Echelon</span></div>
+<div>Batch Routing: <span class="font-semibold text-primary">Global FEFO</span></div>
+<div>Optimization: <span class="font-semibold text-primary">MILP (Simplex)</span></div>
+</div>
+</div>
+</div>
+<!-- KPI Quantitative Summary Comparison -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Unmet Demand -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Unmet Demand Volume</span>
+<span class="material-symbols-outlined text-[18px] text-primary">production_quantity_limits</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">3,420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">units</span>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B1: <span class="font-code font-medium">42,800 u</span></span>
+<span class="text-error font-medium font-code">-92.0%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B2: <span class="font-code font-medium">24,150 u</span></span>
+<span class="text-primary font-medium font-code">-85.8%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 8%"></div>
+<div class="bg-surface-variant h-full" style="width: 92%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">$78.6k simulated exposure vs $984k (B1)</span>
+</div>
+</div>
+<!-- KPI 2: Expiry & Spoilage -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Batch Expiry / Waste</span>
+<span class="material-symbols-outlined text-[18px] text-primary">delete_sweep</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">1,280</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">units</span>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B1: <span class="font-code font-medium">8,450 u</span></span>
+<span class="text-error font-medium font-code">-84.9%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B2: <span class="font-code font-medium">6,120 u</span></span>
+<span class="text-primary font-medium font-code">-79.1%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 15%"></div>
+<div class="bg-surface-variant h-full" style="width: 85%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">$32.0k loss value vs $211k (B1)</span>
+</div>
+</div>
+<!-- KPI 3: Freight Logistics Cost -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Freight &amp; Transfers</span>
+<span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">$94,150</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">USD</span>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B1: <span class="font-code font-medium">$188,400</span></span>
+<span class="text-error font-medium font-code">-50.0%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B2: <span class="font-code font-medium">$142,600</span></span>
+<span class="text-primary font-medium font-code">-34.0%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 50%"></div>
+<div class="bg-surface-variant h-full" style="width: 50%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Eliminated spot rate expedites</span>
+</div>
+</div>
+<!-- KPI 4: Total Objective Penalty -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Composite Objective Loss</span>
+<span class="material-symbols-outlined text-[18px] text-primary">monitoring</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary font-bold tracking-tight">$204,750</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Score</span>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B1: <span class="font-code font-medium">$1,383.4k</span></span>
+<span class="text-error font-medium font-code">-85.2%</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px]">
+<span class="text-on-surface-variant">Policy B2: <span class="font-code font-medium">$850.6k</span></span>
+<span class="text-primary font-medium font-code">-75.9%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 14%"></div>
+<div class="bg-surface-variant h-full" style="width: 86%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Deterministic simulated total loss</span>
+</div>
+</div>
+</div>
+<!-- Contribution Decomposition (Attribution Analysis) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Step 1: B1 to B2 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-code text-label-sm font-semibold text-on-surface">Step 1</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Forecast-Driven Improvement (B1 → B2)</span>
+</div>
+<span class="font-code text-label-sm text-on-surface-variant">ML Lift</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Replacing static reorder points with forward 14-day rolling probability demand signals. Better anticipation of consumption shifts mitigates stockout cliffs prior to lead-time lockouts.
+      </p>
+<div class="grid grid-cols-3 gap-2 p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Unmet Demand Drop</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">-18,650 u</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-code">-43.6%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Expiry Avoided</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">-2,330 u</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-code">-27.6%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Freight Savings</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">+$45,800</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-code">-24.3%</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Key driver: Smoothing replenishment variance upstream reduces regional bullwhip amplification.</span>
+</div>
+</div>
+<!-- Step 2: B2 to Optiqo -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed font-code text-label-sm font-semibold text-on-tertiary-fixed">Step 2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Multi-Echelon Optimization Lift (B2 → Optiqo)</span>
+</div>
+<span class="font-code text-label-sm text-primary font-bold">MILP Delta</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Upgrading from localized reorder logic to coordinated multi-echelon linear programming. Optimizes cross-DC lateral rebalancing and strictly prioritizes nearing-expiry batches across all tiers.
+      </p>
+<div class="grid grid-cols-3 gap-2 p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Unmet Demand Drop</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">-20,730 u</span>
+<span class="font-label-sm text-[11px] text-primary font-code">-85.8%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Expiry Avoided</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">-4,840 u</span>
+<span class="font-label-sm text-[11px] text-primary font-code">-79.1%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Freight Savings</span>
+<span class="font-label-lg text-label-lg font-bold text-primary">+$48,450</span>
+<span class="font-label-sm text-[11px] text-primary font-code">-34.0%</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>Key driver: Global multi-echelon solver routes batches according to residual shelf-life urgency.</span>
+</div>
+</div>
+</div>
+<!-- Interactive Visual Charts Section (Plotly Style Simulation) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart 1: Daily Unmet Demand Volatility -->
+<div class="lg:col-span-7 flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Daily Unmet Demand Volume</span>
+<span class="font-code text-label-sm text-on-surface-variant">(30-Day Simulated Run)</span>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-[11px]">
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-error inline-block"></span>
+<span class="text-on-surface-variant font-code">B1 (Min-Max)</span>
+</span>
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-secondary inline-block"></span>
+<span class="text-on-surface-variant font-code">B2 (Forecast)</span>
+</span>
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-1.5 rounded-sm bg-primary inline-block"></span>
+<span class="text-on-surface font-semibold font-code">Optiqo</span>
+</span>
+</div>
+</div>
+<!-- Plotly Canvas Container -->
+<div class="relative w-full h-64 bg-surface-container-lowest flex flex-col justify-end pt-4">
+<!-- SVG Plotly Grid & Curves -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 680 200">
+<!-- Horizontal Grid Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="65" y2="65"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="110" y2="110"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="155" y2="155"></line>
+<line stroke="#CBD5E1" stroke-width="1" x1="0" x2="680" y1="195" y2="195"></line>
+<!-- Shaded Area for Optiqo -->
+<polygon fill="#00685F" fill-opacity="0.12" points="0,195 20,192 60,190 100,188 140,192 180,187 220,186 260,190 300,189 340,186 380,185 420,188 460,187 500,186 540,188 580,185 620,187 660,186 680,187 680,195 0,195"></polygon>
+<!-- B1 Curve (Dashed Crimson Spikes) -->
+<polyline fill="none" points="0,140 30,110 60,160 90,60 120,80 150,30 180,120 210,40 240,90 270,145 300,50 330,85 360,25 390,115 420,70 450,130 480,45 510,95 540,150 570,35 600,105 630,75 660,140 680,90" stroke="#BA1A1A" stroke-dasharray="4 3" stroke-width="1.75"></polyline>
+<!-- B2 Curve (Amber / Blue Solid) -->
+<polyline fill="none" points="0,165 30,150 60,140 90,120 120,135 150,110 180,130 210,105 240,125 270,140 300,115 330,130 360,95 390,120 420,110 450,125 480,100 510,120 540,135 570,105 600,125 630,115 660,130 680,110" stroke="#006398" stroke-width="1.75"></polyline>
+<!-- Optiqo Curve (Teal Solid Stable) -->
+<polyline fill="none" points="0,192 20,192 60,190 100,188 140,192 180,187 220,186 260,190 300,189 340,186 380,185 420,188 460,187 500,186 540,188 580,185 620,187 660,186 680,187" stroke="#00685F" stroke-width="2.5"></polyline>
+</svg>
+<!-- Axis Markers -->
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant pt-2 border-t border-surface-container">
+<span>Day 1 (Apr 15)</span>
+<span>Day 7</span>
+<span>Day 14</span>
+<span>Day 21</span>
+<span>Day 30 (May 14)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-[12px] text-on-surface-variant bg-surface-container-low px-3 py-1.5 rounded">
+<span>Optiqo daily variance <span class="font-code font-bold text-primary">σ = 24.2 units</span> vs B1 <span class="font-code font-bold text-error">σ = 482.6 units</span></span>
+<span class="font-label-sm text-[11px] font-semibold text-primary">Zero Outlier Surges</span>
+</div>
+</div>
+<!-- Chart 2: Cumulative Expiry & Spoilage Accumulation -->
+<div class="lg:col-span-5 flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Cumulative Batch Expiry</span>
+<span class="font-code text-label-sm text-on-surface-variant">(Units)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[11px] text-on-surface">FEFO Impact</span>
+</div>
+<div class="relative w-full h-64 bg-surface-container-lowest flex flex-col justify-end pt-4">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 380 200">
+<!-- Horizontal Grid Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="380" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="380" y1="75" y2="75"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="380" y1="130" y2="130"></line>
+<line stroke="#CBD5E1" stroke-width="1" x1="0" x2="380" y1="195" y2="195"></line>
+<!-- B1 Trajectory (Steep to 8.45k units) -->
+<path d="M 0,195 Q 120,140 220,80 T 380,25" fill="none" stroke="#BA1A1A" stroke-dasharray="4 3" stroke-width="2"></path>
+<circle cx="380" cy="25" fill="#BA1A1A" r="3.5"></circle>
+<!-- B2 Trajectory (Intermediate to 6.12k units) -->
+<path d="M 0,195 Q 140,165 240,115 T 380,65" fill="none" stroke="#006398" stroke-width="2"></path>
+<circle cx="380" cy="65" fill="#006398" r="3.5"></circle>
+<!-- Optiqo Trajectory (Shallow, flat to 1.28k units) -->
+<path d="M 0,195 Q 160,190 280,180 T 380,165" fill="none" stroke="#00685F" stroke-width="2.5"></path>
+<circle cx="380" cy="165" fill="#00685F" r="4"></circle>
+</svg>
+<!-- Trajectory End Value Badges -->
+<div class="absolute right-2 top-4 flex flex-col gap-1 items-end font-code text-[11px]">
+<span class="text-error font-semibold">B1: 8,450 u</span>
+<span class="text-secondary font-semibold">B2: 6,120 u</span>
+<span class="text-primary font-bold">Optiqo: 1,280 u</span>
+</div>
+<!-- Axis Labels -->
+<div class="flex justify-between font-label-sm text-[10px] text-on-surface-variant pt-2 border-t border-surface-container">
+<span>Day 1</span>
+<span>Day 10</span>
+<span>Day 20</span>
+<span>Day 30</span>
+</div>
+</div>
+<div class="p-2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-body-sm text-[12px] flex items-center justify-between">
+<span>FEFO exhaustion reduces lot spoilage risk by:</span>
+<span class="font-code font-bold text-label-md">-84.9% vs Baseline</span>
+</div>
+</div>
+</div>
+<!-- Granular Comparison Operational Table -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="h-10 px-space-md flex items-center justify-between bg-surface-container-lowest border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Multi-Facet Operational Benchmark Data Grid</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">| 7 Key Service &amp; Logistics Indicators</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant">Tolerance: ±0.01%</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-9 bg-surface-container-low font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">
+<th class="px-space-md font-semibold">Operational Indicator</th>
+<th class="px-space-md font-semibold">Policy B1 (Min-Max)</th>
+<th class="px-space-md font-semibold">Policy B2 (Forecast ML)</th>
+<th class="px-space-md font-semibold text-primary font-bold">Policy Optiqo (MILP)</th>
+<th class="px-space-md font-semibold">Δ vs B2</th>
+<th class="px-space-md font-semibold">Δ vs B1</th>
+<th class="px-space-md font-semibold text-right">Audit Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1: OTIF Service Level -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>On-Time In-Full (OTIF) Rate</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">78.4%</td>
+<td class="px-space-md font-code text-on-surface-variant">87.9%</td>
+<td class="px-space-md font-code font-bold text-primary">99.1%</td>
+<td class="px-space-md font-code text-primary font-semibold">+11.2 pp</td>
+<td class="px-space-md font-code text-primary font-semibold">+20.7 pp</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-medium">Optimal</span>
+</td>
+</tr>
+<!-- Row 2: Peak Stockout Duration -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">timelapse</span>
+<span>Peak Stockout Duration (Consecutive)</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">4.8 Days</td>
+<td class="px-space-md font-code text-on-surface-variant">2.1 Days</td>
+<td class="px-space-md font-code font-bold text-primary">0.3 Days</td>
+<td class="px-space-md font-code text-primary font-semibold">-1.8 Days</td>
+<td class="px-space-md font-code text-primary font-semibold">-4.5 Days</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-medium">Controlled</span>
+</td>
+</tr>
+<!-- Row 3: Expiry Rate -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">hourglass_bottom</span>
+<span>Lot Expiry Rate (% throughput)</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">6.24%</td>
+<td class="px-space-md font-code text-on-surface-variant">4.51%</td>
+<td class="px-space-md font-code font-bold text-primary">0.94%</td>
+<td class="px-space-md font-code text-primary font-semibold">-3.57 pp</td>
+<td class="px-space-md font-code text-primary font-semibold">-5.30 pp</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-medium">FEFO Passed</span>
+</td>
+</tr>
+<!-- Row 4: Consolidation Rate -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">alt_route</span>
+<span>Multi-Drop Route Consolidation</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">22.0%</td>
+<td class="px-space-md font-code text-on-surface-variant">48.5%</td>
+<td class="px-space-md font-code font-bold text-primary">84.2%</td>
+<td class="px-space-md font-code text-primary font-semibold">+35.7 pp</td>
+<td class="px-space-md font-code text-primary font-semibold">+62.2 pp</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-[11px] font-medium">High Fill</span>
+</td>
+</tr>
+<!-- Row 5: Emergency Expedited Freight -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">warning</span>
+<span>Expedited Spot Shipments</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">42 loads ($67k)</td>
+<td class="px-space-md font-code text-on-surface-variant">19 loads ($31k)</td>
+<td class="px-space-md font-code font-bold text-primary">1 load ($1.8k)</td>
+<td class="px-space-md font-code text-primary font-semibold">-94.7%</td>
+<td class="px-space-md font-code text-primary font-semibold">-97.6%</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-medium">Clean</span>
+</td>
+</tr>
+<!-- Row 6: Constraint Breaches -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">gavel</span>
+<span>Capacity &amp; Cold-Chain Breaches</span>
+</td>
+<td class="px-space-md font-code text-error font-medium">17 breaches</td>
+<td class="px-space-md font-code text-on-surface-variant">4 breaches</td>
+<td class="px-space-md font-code font-bold text-primary">0 breaches</td>
+<td class="px-space-md font-code text-primary font-semibold">-100%</td>
+<td class="px-space-md font-code text-primary font-semibold">-100%</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-medium">Zero-Violation</span>
+</td>
+</tr>
+<!-- Row 7: Solver Runtime -->
+<tr class="h-11 hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">memory</span>
+<span>Execution Runtime per 30-Day Pass</span>
+</td>
+<td class="px-space-md font-code text-on-surface-variant">0.4s (Rule engine)</td>
+<td class="px-space-md font-code text-on-surface-variant">4.2s (LightGBM)</td>
+<td class="px-space-md font-code font-bold text-on-surface">43.8s (MILP Simplex)</td>
+<td class="px-space-md font-code text-on-surface-variant">+39.6s</td>
+<td class="px-space-md font-code text-on-surface-variant">+43.4s</td>
+<td class="px-space-md text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[11px] font-medium text-on-surface">Within SLA</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Operational Alternate UX State Previews -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Simulation Lifecycle State Indicators</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Operational Diagnostics &amp; Fallback States)</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">System Standard Handlers</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-1">
+<!-- Loading / In-Progress State -->
+<div class="p-3 rounded bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            Simulation In Progress
+          </span>
+<span class="font-code text-[11px] text-secondary font-bold">42% Complete</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">
+          Evaluating Day 13/30 on Policy B2. Solving 142 mixed-integer continuous flow constraints...
+        </p>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full transition-all duration-300" style="width: 42%"></div>
+</div>
+</div>
+<!-- Infeasible / Constraint Warning State -->
+<div class="p-3 rounded bg-error-container/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-error uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-error">error</span>
+            Convergence Warning
+          </span>
+<span class="font-code text-[11px] text-error font-medium">Zone 4 Cascade</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">
+          Policy B1 reached an unrecoverable stockout condition in DC-North due to static lead-time assumptions.
+        </p>
+<span class="font-label-sm text-[10px] text-error font-medium">B1 execution auto-relaxed with artificial penalty slip.</span>
+</div>
+<!-- Empty / Standby State -->
+<div class="p-3 rounded bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline">hourglass_empty</span>
+            Standby / Cold Cache
+          </span>
+<span class="font-code text-[11px] text-on-surface-variant">Ready</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">
+          New partition parameter sets require re-simulation. Click ‘Run Backtest’ to prime fresh traces.
+        </p>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Previous cached runs preserved in parquet store.</span>
+</div>
+</div>
+</div>
+<!-- Run Metadata & Reproducibility Footprint -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm font-label-sm text-[11px]">
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase font-semibold">Dataset Identifier</span>
+<span class="font-code text-on-surface truncate">Global_Retail_Q3_Simulated.parquet</span>
+<span class="text-on-surface-variant font-code text-[10px]">Size: 142.8 MB (3.4M records)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase font-semibold">Solver &amp; Python Stack</span>
+<span class="font-code text-on-surface">GLPK MILP v5.2 / Optiqo Engine v1.4.2</span>
+<span class="text-on-surface-variant font-code text-[10px]">Streamlit 1.34 • NumPy 1.26.4</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase font-semibold">Execution Timestamp</span>
+<span class="font-code text-on-surface">2025-05-14 11:42:19 UTC</span>
+<span class="text-on-surface-variant font-code text-[10px]">Duration: 48.6s (3 policies x 30 iter)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant uppercase font-semibold">Integrity SHA-256 Hash</span>
+<span class="font-code text-primary truncate">sha256:7f8a91b2c4e09d841e739fa45</span>
+<span class="text-tertiary font-code text-[10px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+        Verified Deterministic Trace
+      </span>
+</div>
+</div>
+<!-- Honesty & Intellectual Integrity Callout Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 text-on-surface-variant flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-outline shrink-0 mt-0.5">shield</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Illustrative Simulated Evaluation Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        The quantitative metrics presented above reflect a deterministic discrete-event mathematical simulation conducted over historical retail transaction traces. While the GLPK MILP formulation optimizes within stated operational constraints, no real-world commercial savings, absolute cost reductions, or statistical significance across unmodeled variables are guaranteed. These metrics serve to validate algorithmic policy convergence, FEFO compliance, and solver stability prior to canary deployment in live production environments.
+      </p>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,235 @@
+---
+name: Optiqo Distribution Intelligence
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#3d4947'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#6d7a77'
+  outline-variant: '#bcc9c6'
+  surface-tint: '#006a61'
+  primary: '#00685f'
+  on-primary: '#ffffff'
+  primary-container: '#008378'
+  on-primary-container: '#f4fffc'
+  inverse-primary: '#6bd8cb'
+  secondary: '#006398'
+  on-secondary: '#ffffff'
+  secondary-container: '#5bb8fe'
+  on-secondary-container: '#00476e'
+  tertiary: '#006860'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#248279'
+  on-tertiary-container: '#f3fffc'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#89f5e7'
+  primary-fixed-dim: '#6bd8cb'
+  on-primary-fixed: '#00201d'
+  on-primary-fixed-variant: '#005049'
+  secondary-fixed: '#cce5ff'
+  secondary-fixed-dim: '#93ccff'
+  on-secondary-fixed: '#001d31'
+  on-secondary-fixed-variant: '#004b73'
+  tertiary-fixed: '#9cf2e8'
+  tertiary-fixed-dim: '#80d5cb'
+  on-tertiary-fixed: '#00201d'
+  on-tertiary-fixed-variant: '#00504a'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.02em
+  display-sm:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 30px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 22px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+  body-md:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: '600'
+    lineHeight: 16px
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '400'
+    lineHeight: 14px
+    letterSpacing: 0.02em
+  code:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-dense: 0.5rem
+  margin: 1.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+---
+
+## Brand & Style
+
+This design system serves enterprise operational planners, inventory analysts, and logistics directors managing complex distribution pipelines. The product identity is defined by clinical precision, computational authority, and immediate operational legibility.
+
+### Design Movement: Modern Utilitarian & Precision Instrumentation
+The visual style rejects ephemeral consumer UI trends, decorative 3D flourishes, blur-heavy glassmorphism, and unnecessary gradients. Instead, it grounds itself in high-density data architectures, crisp boundary definitions, structured tabular layouts, and clear typographic hierarchy. The aesthetic is built specifically for data-intensive enterprise tooling and operational cockpits that translate seamlessly to modern web stacks, Streamlit data apps, and Plotly visualizations.
+
+### Emotional Target
+- **Control and Certainty:** Planners make multi-million dollar fulfillment and routing decisions; interfaces must communicate mathematical stability and zero ambiguity.
+- **Speed to Insight:** Scannability dominates. Key anomalies, stockouts, and routing latencies stand out immediately against calm, neutral surfaces.
+- **Cognitive Quiet:** Extended shift work requires a calm, low-strain light palette with controlled contrast ratios and distinct boundaries between analytical blocks.
+
+## Colors
+
+The color architecture is built around a cool, balanced clinical canvas with purposeful semantic signaling:
+
+- **Canvas & Backgrounds:** The base app canvas is `#F8FAFC` (Slate 50), providing a soft, glare-free backdrop that makes `#FFFFFF` container cards distinctly defined without heavy shadows.
+- **Primary & Secondary Accents:** `#0D9488` (Teal 600) drives core actions, primary KPIs, and active pipeline states. `#0284C7` (Sky 600) acts as secondary routing and logistics markers. `#0F766E` (Teal 700) anchors active selection outlines, table headers, and deep interaction states.
+- **Text & Hierarchy:**
+  - `Display / Headers`: `#0F172A` (Slate 900)
+  - `Body / Primary Data`: `#1E293B` (Slate 800)
+  - `Secondary Labels / Inactive Metrics`: `#334155` (Slate 700)
+  - `Muted / Placeholders`: `#64748B` (Slate 500)
+- **Semantic & Risk Tokens:**
+  - **Success / Optimal:** `#16A34A` text on `#DCFCE7` surface (Green 600 / 100)
+  - **Warning / Constraint Near Capacity:** `#D97706` text on `#FEF3C7` surface (Amber 600 / 100)
+  - **Critical / High-Risk Stockout:** `#DC2626` text on `#FEE2E2` surface (Red 600 / 100)
+  - **System Notice / Routing Info:** `#2563EB` text on `#DBEAFE` surface (Blue 600 / 100)
+- **Structural Lines:** Surface partitions and card borders strictly utilize 1px solid `#E2E8F0` (Slate 200).
+
+## Typography
+
+The typographic system pairs the systematic neutral clarity of **Inter** for all narrative, hierarchical headers, and UI text with the geometric precision of **JetBrains Mono** for all operational metrics, SKU identifiers, order batch hashes, timestamps, and inventory units.
+
+### Implementation Principles
+- **Numerical Alignment:** All tabular data, inventory tallies, and KPI metrics must be rendered using `JetBrains Mono` with tabular lining figures to ensure vertical alignment across data columns.
+- **Strict Hierarchy:** Section overviews use `headline-lg` (`20px/26px`), card-level group indicators use `headline-sm` (`16px/22px`), and detailed table content defaults to dense `body-md` (`13px/18px`).
+- **Data Densification:** Metadata such as "Last Synced: 2m ago" or "Run ID: #VYR-8820" must consistently utilize `label-sm` or `label-md` to remain distinct from editable inputs and general narrative text.
+
+## Layout & Spacing
+
+The layout model is desktop-first, calibrated around a standard 1440px desktop workstation screen width with a high-efficiency 12-column grid.
+
+### Layout Rules
+- **Grid Architecture:** 12-column fixed/fluid hybrid system with 16px (`1rem`) gutters and 24px (`1.5rem`) outer canvas margins. Elements align along a strict 4px/8px incremental base rhythm.
+- **High-Density Compactness:** Dense dashboard views employ `gutter-dense` (8px / `0.5rem`) between related KPI metrics, charts, and filter bars to maximize above-the-fold information density.
+- **Adaptive Breakpoints:**
+  - `Desktop (>= 1440px)`: Primary optimization target. Full multi-column analytical panels, persistent sidebar filters, and expansive 10+ column data tables.
+  - `Tablet / Medium Laptop (1024px - 1439px)`: 8-column layout. Sidebar collapses to an icon-only dock; secondary metric panels stack below primary optimization charts.
+  - `Narrow (< 1024px)`: Single to 4-column flow with horizontally scrolling data tables and accordion-driven parameter panels.
+
+## Elevation & Depth
+
+Visual depth is communicated primarily through **crisp planar boundaries** and subtle tonal contrast rather than heavy atmospheric drop shadows. This ensures compatibility with analytical web components and Python-based data applications.
+
+### Depth Mechanics
+- **Ground Floor (`#F8FAFC`):** Canvas background upon which all operational structures sit.
+- **Level 1 Panels & Cards (`#FFFFFF`):** High-density cards and data containers use a crisp `1px solid #E2E8F0` border and a minimalist low-opacity ambient drop shadow: `box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05)`.
+- **Level 2 Dropdowns, Tooltips, & Filters:** Elevated interactive elements use `1px solid #CBD5E1` with an elevated shadow: `box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.06)`.
+- **Level 3 Modals & Alert Drawers:** Overlays utilize a backdrop tint of `rgba(15, 23, 42, 0.4)` accompanied by `box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1)`.
+- **Zero Glassmorphism:** Never use background blurs (`backdrop-filter: blur()`) or translucent white fills for functional data areas. Content must be 100% opaque for maximum contrast and legibility.
+
+## Shapes
+
+The design system adopts a **Soft / Controlled Precision** geometry (`roundedness: 1`), keeping structural lines compact, industrial, and utilitarian.
+
+### Geometry Specifications
+- **Standard UI Elements (`4px / 0.25rem`):** Buttons, text fields, search bars, pagination controls, status badges, and inline data chips.
+- **Containers & KPI Cards (`8px / 0.5rem` - `rounded-lg`):** Primary metric cards, visualization wrapper frames, data grid containers, and modal dialogs.
+- **Structural Modules (`12px / 0.75rem` - `rounded-xl`):** Master view sections and floating dock drawers.
+- **Circular Badges (`9999px`):** Reserved exclusively for dot indicators (e.g., active server ping, warehouse node state) and user avatar fallbacks. Never use pill shapes for functional buttons or cards.
+
+## Components
+
+### Buttons
+- **Primary:** Solid `#0D9488` fill, `#FFFFFF` text (`Inter` 13px weight 600), 1px solid `#0D9488`. Hover: `#0F766E`. Active: `#115E59`. Height: 32px (compact), padding: 8px 12px.
+- **Secondary / Utility:** `#FFFFFF` fill, `#0F172A` text, 1px solid `#CBD5E1`. Hover: `#F1F5F9`. Active: `#E2E8F0`.
+- **Destructive:** `#FFFFFF` fill, `#DC2626` text, 1px solid `#FECACA`. Hover: `#FEE2E2`.
+- **Icon Buttons:** 32x32px square, 4px corner radius, transparent background with `#334155` stroke iconography.
+
+### Status Badges & Chips
+- **Container Specs:** 20px or 24px height, 4px border radius, 6px horizontal padding. Font: `JetBrains Mono` 11px weight 500.
+- **Optimal (Healthy):** Background `#DCFCE7`, text `#16A34A`, border `1px solid #BBF7D0`.
+- **Warning (Bottleneck):** Background `#FEF3C7`, text `#D97706`, border `1px solid #FDE68A`.
+- **Critical (Stockout / Delay):** Background `#FEE2E2`, text `#DC2626`, border `1px solid #FECACA`.
+- **Informational (In Transit):** Background `#DBEAFE`, text `#2563EB`, border `1px solid #BFDBFE`.
+
+### Input Fields & Controls
+- **Height & Spacing:** Standardized 32px height for ultra-compact filtering, 8px padding horizontal.
+- **Default State:** Background `#FFFFFF`, 1px solid `#CBD5E1`, text `#0F172A` (`Inter` 13px). Placeholder in `#94A3B8`.
+- **Focus State:** 1px solid `#0D9488` with a 2px outer ring in `rgba(13, 148, 136, 0.15)`.
+- **Checkboxes & Radios:** 14x14px square/circle with `#0D9488` active fill and clean white check/dot.
+
+### Cards & Analytical Containers
+- **Surface:** Solid `#FFFFFF`, 8px corner radius, 1px solid `#E2E8F0`.
+- **Header Slot:** Fixed 40px height with border-bottom 1px solid `#F1F5F9`, containing card title (`headline-sm`), action menu, or status pill.
+- **Padding:** 12px to 16px internal padding for metric display cards; 0px internal padding for integrated data grids.
+
+### Data Tables (Operational Grids)
+- **Header Row:** Height 36px, background `#F8FAFC`, border-bottom 1px solid `#CBD5E1`. Typography: `JetBrains Mono` 11px uppercase weight 600, color `#475569`.
+- **Body Rows:** Height 36px (dense) to 44px (standard). Alternating zebra striping optional (`#FFFFFF` and `#F8FAFC`). Border-bottom: 1px solid `#F1F5F9`.
+- **Selected Row:** Background `#F0FDFA` (Teal 50), left indicator border 3px solid `#0D9488`.
+
+### Plotly / Chart Visualization Themes
+- **Canvas Base:** Explicitly transparent or `#FFFFFF`.
+- **Grid Lines:** 1px dotted `#E2E8F0` horizontal axis; vertical grid lines disabled.
+- **Palette Order:** Primary series `#0D9488` (Teal), secondary series `#0284C7` (Sky), tertiary `#6366F1` (Indigo), alert threshold `#DC2626` (Red).

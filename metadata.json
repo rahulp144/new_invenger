@@ -1,0 +1,6 @@
+{
+  "name": "Optiqo - Distribution Intelligence",
+  "description": "Enterprise distribution intelligence, multi-echelon supply allocation, FEFO inventory preservation, and discrete-event solver optimization suite by Team VYROX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9ff","on-secondary-container":"#00476e","tertiary-container":"#248279","primary":"#00685f","secondary":"#006398","primary-container":"#008378","surface-container":"#e5eeff","on-error-container":"#93000a","error-container":"#ffdad6","error":"#ba1a1a","tertiary":"#006860","surface-tint":"#006a61","tertiary-fixed":"#9cf2e8","on-secondary-fixed-variant":"#004b73","inverse-primary":"#6bd8cb","on-primary-fixed-variant":"#005049","on-tertiary":"#ffffff","on-primary":"#ffffff","surface-container-low":"#eff4ff","background":"#f8f9ff","surface-dim":"#cbdbf5","secondary-fixed":"#cce5ff","primary-fixed-dim":"#6bd8cb","on-secondary":"#ffffff","on-surface":"#0b1c30","on-tertiary-container":"#f3fffc","on-primary-fixed":"#00201d","primary-fixed":"#89f5e7","on-secondary-fixed":"#001d31","on-tertiary-fixed":"#00201d","outline-variant":"#bcc9c6","surface-bright":"#f8f9ff","on-error":"#ffffff","on-background":"#0b1c30","on-primary-container":"#f4fffc","outline":"#6d7a77","surface-container-lowest":"#ffffff","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","surface-container-high":"#dce9ff","on-surface-variant":"#3d4947","inverse-on-surface":"#eaf1ff","on-tertiary-fixed-variant":"#00504a","surface-variant":"#d3e4fe","secondary-container":"#5bb8fe","secondary-fixed-dim":"#93ccff","tertiary-fixed-dim":"#80d5cb"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","space-lg":"1rem","margin":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","space-md":"0.75rem","gutter-dense":"0.5rem"},"fontFamily":{"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"body-md":["Inter"],"display-lg":["Inter"],"label-md":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-sm":["Inter"],"display-sm":["Inter"],"headline-lg":["Inter"],"code":["JetBrains Mono"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"600"}],"display-sm":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"code":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-md bg-surface-container-lowest/5"><img alt="Optiqo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHMuD3UGToF3fAp2yWQIXT1ltmrMo3v5wsOB5_QnoHFzFqbUCicttGrFADK_iqrs5yZu4u1E7CDKlTziQ0avIwqJeyZUjfgKQTpHp0IfdJikhylM7IuNTHaddQwCdbq3HBWnDkiwsf7jsxjBUzrkQYiylqfeMUjCa4y8ebybSnO1_14I3khPzGvHDj6X7Z6qnPJtbANsdVVy6Dvf6hyhT6P2TfU1ghETFhpCK9vZXjRpPxcNLymtkvBbQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">Optiqo</span><span class="font-label-sm text-label-sm text-outline-variant mt-0.5 tracking-wide uppercase">Distribution Intelligence</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Operational Modules</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary text-on-primary font-body-lg rounded"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="data-and-validation" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Data &amp; Validation</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="risk-overview" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Overview</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="allocation-plan" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Allocation Plan</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="recommendation-detail" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Recommendation Detail</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="backtest" href="#"><span class="material-symbols-outlined text-[18px]">history</span>Backtest</a></nav></div><div class="p-space-md bg-surface-container-lowest/5 flex flex-col gap-space-xs font-label-sm text-label-sm text-outline-variant"><div class="flex items-center justify-between"><span class="text-inverse-on-surface/70 font-semibold">Optiqo Engine</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-code text-[10px]">v1.4.2-st</span></div><div class="flex items-center justify-between text-inverse-on-surface/50 text-[11px]"><span>Enterprise Suite</span><span class="font-medium text-inverse-on-surface/80">Team VYROX</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest z-40 px-space-xl flex items-center justify-between shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface"><span class="text-on-surface-variant font-body-md text-body-md">Operations</span><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span><span>Data &amp; Validation</span></div><div class="h-4 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">database</span><span class="font-code">Dataset: Global_Retail_Q3_Simulated</span></div><span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wide">[SIMULATED DATA]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-outline">event_repeat</span><span class="font-medium">Cycle: 2025-W18 (Bi-Weekly)</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span>Last run: Ready to validate</span></div></div><div class="h-5 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Operations Planner</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Global Supply Chain</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-xl py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP CONTEXT & STATE SWITCHER -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Data &amp; Validation</h1>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Step 01 / Pipeline Setup</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Ingest source datasets, run integrity validation rules, and resolve schema or anomaly discrepancies before generating inventory allocation models.
+      </p>
+</div>
+<!-- State Simulation Switcher Bar -->
+<div class="flex items-center gap-1.5 p-1 rounded bg-surface-container-low shadow-sm overflow-x-auto shrink-0">
+<span class="px-2 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Simulate State:</span>
+<button class="state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container" id="tab-ready" onclick="switchState('ready')">
+        Before Validation
+      </button>
+<button class="state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container" id="tab-running" onclick="switchState('running')">
+        Validating (68%)
+      </button>
+<button class="state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm" id="tab-warning" onclick="switchState('warning')">
+        Passed w/ Warnings (Active)
+      </button>
+<button class="state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container" id="tab-passed" onclick="switchState('passed')">
+        Passed (Clean)
+      </button>
+<button class="state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container" id="tab-failed" onclick="switchState('failed')">
+        Failed (Blocked)
+      </button>
+</div>
+</div>
+<!-- SECTION 1: DATASET SELECTION CARD -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md bg-surface-container-lowest">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">dataset</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Planning Dataset</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wide">[SIMULATED DATA - DEMO MODE]</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Source: ERP &amp; WMS Data Pipeline • Automated connector sync</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span>
+          Last validated: <span class="font-code text-on-surface-variant font-medium">2025-05-12 09:15 UTC</span>
+</span>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container-high transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+          Reload Demo
+        </button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5" onclick="triggerValidationRun()" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+          Validate Data
+        </button>
+</div>
+</div>
+<!-- Configuration & Ingestion Properties Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md pt-space-xs">
+<!-- File Selector Slot -->
+<div class="flex flex-col gap-1 p-space-md rounded bg-surface-container-low">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Select Parquet Partition</label>
+<div class="relative flex items-center mt-1">
+<select class="w-full h-8 pl-2 pr-7 rounded bg-surface-container-lowest text-on-surface font-code text-body-sm focus:outline-none appearance-none cursor-pointer">
+<option selected="">demo_supply_chain_q3_simulated.parquet (14.2 MB) [Active]</option>
+<option>demo_supply_chain_q2_historical.parquet (13.8 MB)</option>
+<option>stress_test_black_swan_surge.parquet (19.4 MB)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-outline pointer-events-none text-[16px]">expand_more</span>
+</div>
+</div>
+<!-- Ingestion Timestamp -->
+<div class="flex flex-col justify-between p-space-md rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Ingestion Timestamp</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code text-body-md font-semibold text-on-surface">Today, 08:42:15 UTC</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-code">v2.6 Schema</span>
+</div>
+</div>
+<!-- Node Network Coverage -->
+<div class="flex flex-col justify-between p-space-md rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Target Node Topology</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface">12 Regional DCs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">84 Retail Fulfillment Hubs</span>
+</div>
+</div>
+<!-- Parquet Schema Metadata -->
+<div class="flex flex-col justify-between p-space-md rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Integrity Rule Count</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code text-body-md font-semibold text-on-surface">18 Active Rules</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Deterministic Engine</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: VALIDATION STATUS BANNERS (STATE DRIVEN) -->
+<div id="status-container">
+<!-- STATE: Passed with Warnings (DEFAULT ACTIVE VIEW) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch" id="state-warning">
+<div class="w-2.5 bg-secondary shrink-0"></div>
+<div class="p-space-lg flex-1 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded bg-secondary-fixed/50 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">warning</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                Validation Completed with 3 Warnings (1 Resolved, 2 Non-Blocking)
+              </span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                Pass Rate: 98.4%
+              </span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-medium">
+                Simulation Ready
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+              Dataset conforms to standard schema thresholds. 2 non-blocking inventory discrepancies detected in Western Distribution Centers. You can proceed directly to the Risk Overview module or review and remediate row-level findings below.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end lg:self-center">
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container-high transition-colors" onclick="scrollToFindings()">
+            Review Findings
+          </button>
+<a class="px-3.5 py-1.5 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1" href="#">
+            Accept &amp; Proceed
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- STATE: Ready / Before Validation (HIDDEN IN DEFAULT) -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch" id="state-ready">
+<div class="w-2.5 bg-outline-variant shrink-0"></div>
+<div class="p-space-lg flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline text-[22px]">play_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Pipeline Ready for Ingestion Check</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Idle</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              Click <span class="font-semibold text-primary">"Validate Data"</span> to execute validation against 48,250 staging records across 18 deterministic integrity checks.
+            </p>
+</div>
+</div>
+<button class="px-4 py-2 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shrink-0" onclick="triggerValidationRun()">
+          Run Validation Now
+        </button>
+</div>
+</div>
+<!-- STATE: In Progress / Validating (HIDDEN IN DEFAULT) -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch" id="state-running">
+<div class="w-2.5 bg-secondary-container shrink-0"></div>
+<div class="p-space-lg flex-1 flex flex-col gap-space-md">
+<div class="flex items-center justify-between gap-space-md flex-wrap">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded bg-secondary-fixed flex items-center justify-center shrink-0 animate-spin">
+<span class="material-symbols-outlined text-secondary text-[22px]">sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Validating Dataset Partitions...</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Step 4 of 6: Lead-time distribution variance &amp; outlier isolation</span>
+</div>
+</div>
+<span class="font-code text-display-sm text-secondary font-bold">68%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<!-- STATE: Passed (Clean) (HIDDEN IN DEFAULT) -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch" id="state-passed">
+<div class="w-2.5 bg-primary shrink-0"></div>
+<div class="p-space-lg flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dataset Fully Verified • Zero Discrepancies</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">100% Pass Rate</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              All 18 operational integrity rules passed with 48,250 records accepted. Allocation solver input vectors generated.
+            </p>
+</div>
+</div>
+<a class="px-4 py-2 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shrink-0 flex items-center gap-1.5" href="#">
+          Proceed to Risk Overview
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- STATE: Failed (Blocked) (HIDDEN IN DEFAULT) -->
+<div class="hidden bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row items-stretch" id="state-failed">
+<div class="w-2.5 bg-error shrink-0"></div>
+<div class="p-space-lg flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[22px]">block</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Validation Blocked: 4 Fatal Schema Errors Found</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Gated Pipeline</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              Fatal foreign key mismatch in <code class="font-code text-error font-medium">sku_catalog</code> and missing demand columns. Downstream model generation is locked.
+            </p>
+</div>
+</div>
+<button class="px-4 py-2 rounded bg-error text-on-error font-body-md text-body-md font-semibold hover:opacity-95 transition-opacity shrink-0">
+          View Fatal Schema Errors
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION 3: SUMMARY KPI CARDS (4 CARD HIGH-DENSITY GRID) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Records</span>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">table_rows</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg font-bold text-on-surface font-code tracking-tight">48,250</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +3,120
+        </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 6 core parquet tables</span>
+<span class="font-label-sm text-label-sm text-outline font-code">14.2 MB</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Fatal Errors</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Pass</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg font-bold text-on-surface font-code tracking-tight">0</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Blocking</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero fatal schema rejections</span>
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Validation Warnings</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">Review</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg font-bold text-secondary font-code tracking-tight">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Active</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 lead-time anomalies, 1 null stock</span>
+<span class="font-label-sm text-label-sm text-secondary font-code">1 fixed</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Usable Inventory Units</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">99.2%</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg font-bold text-primary font-code tracking-tight">47,890</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">SKU-DCs</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">360 rows flagged for proxy interpolation</span>
+<span class="material-symbols-outlined text-outline text-[16px]">info</span>
+</div>
+</div>
+</div>
+<!-- SECTION 4: INGESTION PIPELINE DIAGNOSTIC MOSAIC -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Vector Density & Distribution Plot -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">waterfall_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Parquet Ingestion Density &amp; Lead-Time Variance</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Valid Rows
+          </span>
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Variance Flagged
+          </span>
+</div>
+</div>
+<!-- Rich Visual Vector Graphic -->
+<div class="py-space-sm">
+<svg class="w-full h-32 overflow-visible" preserveaspectratio="none" viewbox="0 0 680 140">
+<defs>
+<lineargradient id="primaryAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00685f" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#00685f" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid horizontal guides -->
+<line stroke="#e5eeff" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="20" y2="20"></line>
+<line stroke="#e5eeff" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="60" y2="60"></line>
+<line stroke="#e5eeff" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="100" y2="100"></line>
+<line stroke="#cbdbf5" stroke-width="1" x1="0" x2="680" y1="130" y2="130"></line>
+<!-- Area fill -->
+<path d="M0,110 Q45,95 90,80 T180,65 T270,72 T360,40 T450,55 T540,30 T630,75 L680,82 L680,130 L0,130 Z" fill="url(#primaryAreaGrad)"></path>
+<!-- Primary curve line -->
+<path d="M0,110 Q45,95 90,80 T180,65 T270,72 T360,40 T450,55 T540,30 T630,75 L680,82" fill="none" stroke="#00685f" stroke-width="2.5"></path>
+<!-- Outlier callout 1 -->
+<circle cx="360" cy="40" fill="#5bb8fe" r="5" stroke="#006398" stroke-width="2"></circle>
+<text fill="#00476e" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="360" y="28">+3.8σ Lead-Time (Row #18,291)</text>
+<!-- Outlier callout 2 -->
+<circle cx="540" cy="30" fill="#5bb8fe" r="5" stroke="#006398" stroke-width="2"></circle>
+<text fill="#00476e" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="540" y="18">Capacity 104% (DC-04)</text>
+<!-- Standard ticks -->
+<circle cx="90" cy="80" fill="#00685f" r="3"></circle>
+<circle cx="180" cy="65" fill="#00685f" r="3"></circle>
+<circle cx="270" cy="72" fill="#00685f" r="3"></circle>
+<circle cx="450" cy="55" fill="#00685f" r="3"></circle>
+<circle cx="630" cy="75" fill="#00685f" r="3"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-sm text-label-sm text-outline">
+<span>Partition batch range: Part_00000 to Part_00012</span>
+<span class="font-code text-on-surface-variant font-medium">Mean lead time: 14.1 days (σ = 2.4)</span>
+</div>
+</div>
+<!-- Table Ingestion Status Checklist -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-lowest">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Table Schema Coverage</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold font-code">6 / 6 Validated</span>
+</div>
+<div class="flex flex-col gap-space-xs my-space-xs">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-code text-body-sm font-semibold text-on-surface">inventory_levels</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code">24,120 rows</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">warning</span>
+<span class="font-code text-body-sm font-semibold text-on-surface">lead_time_matrix</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-code font-semibold">2 warnings</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-code text-body-sm font-semibold text-on-surface">dc_master</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code">12 rows</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-code text-body-sm font-semibold text-on-surface">sku_catalog</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code">4,812 rows</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-code text-body-sm font-semibold text-on-surface">hub_network_routing</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-code">19,308 rows</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Deterministic Rule Set</span>
+<span class="font-code text-primary font-semibold">v2025.1-prod</span>
+</div>
+</div>
+</div>
+<!-- SECTION 5: VALIDATION FINDINGS TABLE -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col" id="findings-section">
+<!-- Table Operational Control Toolbar -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Validation Audit Log &amp; Findings</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-code font-medium">4 items</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Search filter -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2 text-outline text-[16px] pointer-events-none">search</span>
+<input class="h-8 pl-7 pr-3 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none w-48 sm:w-60" id="findingSearch" onkeyup="filterFindings()" placeholder="Filter field, rule or code..." type="text"/>
+</div>
+<!-- Severity dropdown filter -->
+<select class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm focus:outline-none appearance-none cursor-pointer" id="severitySelect" onchange="filterFindings()">
+<option value="ALL">Severity: All</option>
+<option value="WARNING">Warnings (2)</option>
+<option value="RESOLVED">Resolved (1)</option>
+<option value="INFO">Info (1)</option>
+</select>
+<!-- Table filter -->
+<select class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm focus:outline-none appearance-none cursor-pointer" id="tableSelect" onchange="filterFindings()">
+<option value="ALL">Table: All Tables</option>
+<option value="inventory_levels">inventory_levels</option>
+<option value="lead_time_matrix">lead_time_matrix</option>
+<option value="dc_master">dc_master</option>
+</select>
+<!-- Export Action -->
+<button class="h-8 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit
+        </button>
+</div>
+</div>
+<!-- Operational Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left" id="findingsTable">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider h-9">
+<th class="py-2 px-space-md font-semibold">Severity</th>
+<th class="py-2 px-space-md font-semibold">Source Table</th>
+<th class="py-2 px-space-md font-semibold">Row #</th>
+<th class="py-2 px-space-md font-semibold">Target Field</th>
+<th class="py-2 px-space-md font-semibold">Validation Rule</th>
+<th class="py-2 px-space-md font-semibold">Finding Message &amp; System Resolution</th>
+<th class="py-2 px-space-md font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Finding 1: Warning (Active) -->
+<tr class="finding-row hover:bg-surface-container-low/60 transition-colors" data-severity="WARNING" data-table="lead_time_matrix">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> WARNING
+              </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="font-code text-label-sm text-on-surface bg-surface-container px-1.5 py-0.5 rounded">lead_time_matrix</span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface-variant">#18,291</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface font-semibold">lead_time_days</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-secondary">VAL_R09_LEADTIME_OUTLIER</td>
+<td class="py-space-sm px-space-md font-body-sm text-body-sm text-on-surface max-w-md">
+              Reported transit lead time (<span class="font-code font-semibold">48d</span>) is 3.8σ above historical distribution center mean (<span class="font-code font-semibold">14d</span>). Marked for variance dampening proxy.
+            </td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-body-sm text-body-sm font-semibold transition-colors" type="button">
+                  Dampen (18d)
+                </button>
+<button class="px-2 py-1 rounded text-outline hover:bg-surface-container font-body-sm text-body-sm transition-colors" type="button">
+                  Ignore
+                </button>
+</div>
+</td>
+</tr>
+<!-- Finding 2: Warning (Active) -->
+<tr class="finding-row hover:bg-surface-container-low/60 transition-colors" data-severity="WARNING" data-table="dc_master">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> WARNING
+              </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="font-code text-label-sm text-on-surface bg-surface-container px-1.5 py-0.5 rounded">dc_master</span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface-variant">#04,821</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface font-semibold">transit_buffer</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-secondary">VAL_R15_CAPACITY_LIMIT</td>
+<td class="py-space-sm px-space-md font-body-sm text-body-sm text-on-surface max-w-md">
+              DC-04 inbound cross-dock capacity utilization calculated at <span class="font-code font-semibold">104%</span>. System will auto-route overflow to DC-02 secondary terminal.
+            </td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-body-sm text-body-sm font-semibold transition-colors" type="button">
+                  Authorize Overflow
+                </button>
+<button class="px-2 py-1 rounded text-outline hover:bg-surface-container font-body-sm text-body-sm transition-colors" type="button">
+                  Review
+                </button>
+</div>
+</td>
+</tr>
+<!-- Finding 3: Resolved (Green) -->
+<tr class="finding-row hover:bg-surface-container-low/60 transition-colors" data-severity="RESOLVED" data-table="inventory_levels">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> RESOLVED
+              </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="font-code text-label-sm text-on-surface bg-surface-container px-1.5 py-0.5 rounded">inventory_levels</span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface-variant">#10,482</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface font-semibold">safety_stock_min</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-primary">VAL_R02_NULL_CHECK</td>
+<td class="py-space-sm px-space-md font-body-sm text-body-sm text-on-surface max-w-md">
+              Reported safety stock was <span class="font-code text-outline font-semibold">NULL</span> for SKU-7729. Default fallback rule of <span class="font-code font-semibold">150 units</span> automatically injected.
+            </td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<span class="font-label-sm text-label-sm text-outline font-code">Auto-Handled</span>
+</td>
+</tr>
+<!-- Finding 4: Info (Blue) -->
+<tr class="finding-row hover:bg-surface-container-low/60 transition-colors" data-severity="INFO" data-table="inventory_levels">
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> INFO
+              </span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap">
+<span class="font-code text-label-sm text-on-surface bg-surface-container px-1.5 py-0.5 rounded">inventory_levels</span>
+</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface-variant">#34,102</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-on-surface font-semibold">reorder_point</td>
+<td class="py-space-sm px-space-md whitespace-nowrap font-code text-label-sm text-outline">VAL_R04_NON_NEGATIVE</td>
+<td class="py-space-sm px-space-md font-body-sm text-body-sm text-on-surface max-w-md">
+              Negative allocated unit index (-12) clamped to zero boundary according to replenishment standard baseline.
+            </td>
+<td class="py-space-sm px-space-md whitespace-nowrap text-right">
+<button class="px-2 py-1 rounded text-outline hover:bg-surface-container font-body-sm text-body-sm transition-colors" type="button">
+                Details
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Meta -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span>Deterministic Rule Engine: <span class="font-code font-medium">18 of 18 Active</span></span>
+<span>•</span>
+<span>Filtered view: <span class="font-code font-semibold text-on-surface" id="visibleRowCount">4 items</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>All fatal blocks resolved</span>
+</div>
+</div>
+</div>
+<!-- SECTION 6: WORKFLOW NAVIGATION & NEXT-STEP GATE -->
+<div class="sticky bottom-4 z-30 bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dataset Cleared for Risk Analysis</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Active Pipeline Stage</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 warnings present, but non-blocking. Next module will simulate safety-stock impact and stockout risks.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap shrink-0">
+<button class="px-3.5 py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-medium transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+        Export Quality Report (PDF)
+      </button>
+<a class="px-4 py-2 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-all shadow-sm flex items-center gap-2" href="#" id="nextStepBtn">
+        Continue to Risk Overview
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- State Preview & Interactive Logic -->
+<script>
+  function switchState(state) {
+    // Hide all state banners
+    const states = ['ready', 'running', 'warning', 'passed', 'failed'];
+    states.forEach(s => {
+      const banner = document.getElementById('state-' + s);
+      if (banner) banner.classList.add('hidden');
+      const tab = document.getElementById('tab-' + s);
+      if (tab) {
+        tab.className = 'state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:bg-surface-container';
+      }
+    });
+
+    // Reveal target banner
+    const targetBanner = document.getElementById('state-' + state);
+    if (targetBanner) targetBanner.classList.remove('hidden');
+
+    // Highlight target tab
+    const targetTab = document.getElementById('tab-' + state);
+    if (targetTab) {
+      targetTab.className = 'state-tab px-2.5 py-1 rounded font-label-sm text-label-sm transition-all bg-primary text-on-primary font-semibold shadow-sm';
+    }
+
+    // Toggle downstream button availability based on state
+    const nextBtn = document.getElementById('nextStepBtn');
+    if (state === 'failed' || state === 'ready' || state === 'running') {
+      nextBtn.classList.add('opacity-50', 'pointer-events-none');
+      nextBtn.innerHTML = 'Module Gated (Solve Errors) <span class="material-symbols-outlined text-[18px]">lock</span>';
+    } else {
+      nextBtn.classList.remove('opacity-50', 'pointer-events-none');
+      nextBtn.innerHTML = 'Continue to Risk Overview <span class="material-symbols-outlined text-[18px]">arrow_forward</span>';
+    }
+  }
+
+  function triggerValidationRun() {
+    switchState('running');
+    setTimeout(() => {
+      switchState('warning');
+    }, 1800);
+  }
+
+  function scrollToFindings() {
+    const el = document.getElementById('findings-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function filterFindings() {
+    const searchVal = document.getElementById('findingSearch').value.toLowerCase();
+    const severityVal = document.getElementById('severitySelect').value;
+    const tableVal = document.getElementById('tableSelect').value;
+    const rows = document.querySelectorAll('.finding-row');
+
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const rowSev = row.getAttribute('data-severity');
+      const rowTable = row.getAttribute('data-table');
+      const rowText = row.innerText.toLowerCase();
+
+      const matchSearch = !searchVal || rowText.includes(searchVal);
+      const matchSev = severityVal === 'ALL' || rowSev === severityVal;
+      const matchTable = tableVal === 'ALL' || rowTable === tableVal;
+
+      if (matchSearch && matchSev && matchTable) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('visibleRowCount').innerText = visibleCount + ' items';
+  }
+</script></main></div></body></html>

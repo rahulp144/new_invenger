@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9ff","on-secondary-container":"#00476e","tertiary-container":"#248279","primary":"#00685f","secondary":"#006398","primary-container":"#008378","surface-container":"#e5eeff","on-error-container":"#93000a","error-container":"#ffdad6","error":"#ba1a1a","tertiary":"#006860","surface-tint":"#006a61","tertiary-fixed":"#9cf2e8","on-secondary-fixed-variant":"#004b73","inverse-primary":"#6bd8cb","on-primary-fixed-variant":"#005049","on-tertiary":"#ffffff","on-primary":"#ffffff","surface-container-low":"#eff4ff","background":"#f8f9ff","surface-dim":"#cbdbf5","secondary-fixed":"#cce5ff","primary-fixed-dim":"#6bd8cb","on-secondary":"#ffffff","on-surface":"#0b1c30","on-tertiary-container":"#f3fffc","on-primary-fixed":"#00201d","primary-fixed":"#89f5e7","on-secondary-fixed":"#001d31","on-tertiary-fixed":"#00201d","outline-variant":"#bcc9c6","surface-bright":"#f8f9ff","on-error":"#ffffff","on-background":"#0b1c30","on-primary-container":"#f4fffc","outline":"#6d7a77","surface-container-lowest":"#ffffff","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","surface-container-high":"#dce9ff","on-surface-variant":"#3d4947","inverse-on-surface":"#eaf1ff","on-tertiary-fixed-variant":"#00504a","surface-variant":"#d3e4fe","secondary-container":"#5bb8fe","secondary-fixed-dim":"#93ccff","tertiary-fixed-dim":"#80d5cb"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","space-lg":"1rem","margin":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","space-md":"0.75rem","gutter-dense":"0.5rem"},"fontFamily":{"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"body-md":["Inter"],"display-lg":["Inter"],"label-md":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-sm":["Inter"],"display-sm":["Inter"],"headline-lg":["Inter"],"code":["JetBrains Mono"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","fontWeight":"600"}],"display-sm":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"code":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-md bg-surface-container-lowest/5"><img alt="Optiqo Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WHMuD3UGToF3fAp2yWQIXT1ltmrMo3v5wsOB5_QnoHFzFqbUCicttGrFADK_iqrs5yZu4u1E7CDKlTziQ0avIwqJeyZUjfgKQTpHp0IfdJikhylM7IuNTHaddQwCdbq3HBWnDkiwsf7jsxjBUzrkQYiylqfeMUjCa4y8ebybSnO1_14I3khPzGvHDj6X7Z6qnPJtbANsdVVy6Dvf6hyhT6P2TfU1ghETFhpCK9vZXjRpPxcNLymtkvBbQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">Optiqo</span><span class="font-label-sm text-label-sm text-outline-variant mt-0.5 tracking-wide uppercase">Distribution Intelligence</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Operational Modules</div></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary text-on-primary font-body-lg rounded"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="data-and-validation" href="#"><span class="material-symbols-outlined text-[18px]">verified</span>Data &amp; Validation</a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 transition-colors bg-primary text-on-primary font-body-lg rounded" data-path="risk-overview" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Overview</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="allocation-plan" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span>Allocation Plan</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="recommendation-detail" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Recommendation Detail</a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded font-body-md text-body-md text-inverse-on-surface/80 hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="backtest" href="#"><span class="material-symbols-outlined text-[18px]">history</span>Backtest</a></nav></div><div class="p-space-md bg-surface-container-lowest/5 flex flex-col gap-space-xs font-label-sm text-label-sm text-outline-variant"><div class="flex items-center justify-between"><span class="text-inverse-on-surface/70 font-semibold">Optiqo Engine</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest/20 text-inverse-on-surface font-code text-[10px]">v1.4.2-st</span></div><div class="flex items-center justify-between text-inverse-on-surface/50 text-[11px]"><span>Enterprise Suite</span><span class="font-medium text-inverse-on-surface/80">Team VYROX</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest z-40 px-space-xl flex items-center justify-between shadow-[0_1px_4px_rgba(15,23,42,0.06)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface"><span class="text-on-surface-variant font-body-md text-body-md">Operations</span><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span><span>Data &amp; Validation</span></div><div class="h-4 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">database</span><span class="font-code">Dataset: Global_Retail_Q3_Simulated</span></div><span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wide">[SIMULATED DATA]</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-outline">event_repeat</span><span class="font-medium">Cycle: 2025-W18 (Bi-Weekly)</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span>Last run: Ready to validate</span></div></div><div class="h-5 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Operations Planner</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Global Supply Chain</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-xl py-space-lg max-w-[1440px] mx-auto"><div class="flex flex-col w-full">
+<!-- Top Operational Context Ribbon (Dynamic State Pill Bar) -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center flex-wrap gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-code font-semibold uppercase text-primary">RUN #OPT-9412</span>
+<span class="text-outline-variant">•</span>
+<span>Solver: <strong class="text-on-surface font-code">GLPK-v5.2.1-MILP</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Convergence: <strong class="text-on-surface font-code">14.8s (Gap: 0.00%)</strong></span>
+<span class="text-outline-variant">•</span>
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-on-surface font-label-sm">Audited by Deterministic Rule Engine</span>
+</div>
+<!-- State Preview Switcher for Streamlit Mockup -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded">
+<span class="font-label-sm text-label-sm text-outline px-1.5 uppercase font-medium">State View:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm font-semibold text-primary shadow-sm">Optimal (Active)</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container-highest/50 text-on-surface-variant font-label-sm text-label-sm transition-colors">Solving...</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container-highest/50 text-on-surface-variant font-label-sm text-label-sm transition-colors">Blocked</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container-highest/50 text-on-surface-variant font-label-sm text-label-sm transition-colors">Fallback</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container-highest/50 text-on-surface-variant font-label-sm text-label-sm transition-colors">Not Run</button>
+</div>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-lg gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-display-sm text-display-sm text-on-surface tracking-tight">Allocation Plan</h1>
+<span class="px-2.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+          7-Day Multi-Echelon Dispatch Solver
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+          Deterministic Clearance Active
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Generate and review optimal stock rebalancing and fulfillment dispatch orders across regional DCs and destination hubs. Constrained by transit matrices, batch FEFO shelf-life, and multi-tier freight cost.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span>
+        Simulate What-If...
+      </button>
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">restart_alt</span>
+        Reset
+      </button>
+<button class="px-4 py-1.5 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+        Generate Plan
+      </button>
+</div>
+</div>
+<!-- Planning Horizon & Solver Control Strip (Streamlit Card Paradigm) -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-md mb-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md items-center">
+<!-- Param 1 -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">date_range</span> Planning Horizon
+        </span>
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded font-code text-code text-on-surface font-semibold flex items-center justify-between">
+<span>7 Days (May 14 – May 21, 2025)</span>
+<span class="text-outline font-label-sm text-[11px]">LOCKED</span>
+</div>
+</div>
+<!-- Param 2 -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Planning Start Date
+        </span>
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded font-code text-code text-on-surface flex items-center justify-between">
+<span>2025-05-14T00:00:00Z</span>
+<span class="material-symbols-outlined text-[14px] text-outline">schedule</span>
+</div>
+</div>
+<!-- Param 3 -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">balance</span> Solver Objective Function
+        </span>
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded font-body-md text-body-md text-on-surface truncate" title="Minimize Total Cost (Lost Margin + Expiry + Freight)">
+<span class="text-primary font-semibold">Min Cost:</span> Lost Margin + Expiry + Freight
+        </div>
+</div>
+<!-- Param 4 Toggle -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">ac_unit</span> Cold-Chain Protocol
+        </span>
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Strict 48h Reefer SLA</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px] font-bold">ACTIVE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Stage Solver Status Pipeline Tracker -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-start gap-space-md relative overflow-hidden">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Stage 1: Ingestion &amp; Demand</span>
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Demand &amp; Lead-Time</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">14,820u demand matrix modeled across 12 origin DCs.</p>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-primary"></div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-start gap-space-md relative overflow-hidden">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Stage 2: MILP Optimization</span>
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">GLPK v5.2 Converged</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">4,120 constraints evaluated, 0 unassigned critical SKUs.</p>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-primary"></div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex items-start gap-space-md relative overflow-hidden">
+<div class="w-8 h-8 rounded bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">Stage 3: Safety Audit</span>
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Post-Solver Clearance</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">100% FEFO &amp; warehouse physical volume verified.</p>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+</div>
+</div>
+<!-- Prominent Independent Constraint Checker Banner -->
+<div class="bg-surface-container-low rounded p-space-md mb-space-lg shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">INDEPENDENT CONSTRAINT CHECK: PASSED (18/18 CHECKS)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-code text-[11px] font-semibold uppercase tracking-wider">
+            CLEARED FOR WMS DISPATCH
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<strong class="text-on-surface font-medium">CRITICAL COMPLIANCE GATE:</strong> Independent safety auditor verified zero negative stock inventories, zero shelf-life breaches upon arrival, and all route freight agreements validated. Dispatch instructions are locked and legally authorized for WMS ingestion.
+        </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded shadow-sm text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">lock_clock</span>
+<span>Authorization Hash: <span class="font-code text-on-surface font-medium">0x88F2...4E9A</span></span>
+</div>
+</div>
+<!-- Before vs. After Comparison KPI Suite (4 Metric Blocks) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Expected Unmet Demand</span>
+<span class="material-symbols-outlined text-outline text-[16px]">production_quantity_limits</span>
+</div>
+<div class="flex flex-col gap-1 my-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-code">1,420 u</span>
+<span class="text-outline font-code text-body-sm">was 14,820 u</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Exposure: $32.8k (was $342.5k)</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code font-bold">-90.4%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-space-xs">
+<div class="bg-primary h-full rounded-full" style="width: 90.4%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Expected Expiry Loss (FEFO)</span>
+<span class="material-symbols-outlined text-outline text-[16px]">hourglass_bottom</span>
+</div>
+<div class="flex flex-col gap-1 my-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-code">420 u</span>
+<span class="text-outline font-code text-body-sm">was 3,150 u</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Loss: $10.5k (was $78.2k)</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code font-bold">-86.7%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-space-xs">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 86.7%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Scheduled Freight &amp; Transfer</span>
+<span class="material-symbols-outlined text-outline text-[16px]">local_shipping</span>
+</div>
+<div class="flex flex-col gap-1 my-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-code">$64,850</span>
+<span class="text-outline font-code text-body-sm">was $184,200</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Scheduled FTL/LTL Multi-drop</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code font-bold">-$119,350</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-space-xs">
+<div class="bg-secondary h-full rounded-full" style="width: 64.8%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Checker Integrity Status</span>
+<span class="material-symbols-outlined text-primary text-[16px]">rule</span>
+</div>
+<div class="flex flex-col gap-1 my-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-code">PASSED (100%)</span>
+<span class="text-on-surface font-code text-body-sm">0 Violations</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">142 route pairs / 84 cold-chain rules</span>
+<span class="text-primary font-code font-bold">VERIFIED</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-space-xs">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Operational Toolbar -->
+<div class="bg-surface-container-lowest rounded p-space-sm shadow-sm mb-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Search Input -->
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="w-full pl-8 pr-3 py-1 text-body-sm font-body-sm bg-surface-container-low rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search SKU, Batch, or Route..." type="text"/>
+</div>
+<!-- Origin DC Dropdown -->
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface cursor-pointer hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-outline">warehouse</span>
+<span>Origin: <strong>All DCs (12)</strong></span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</div>
+<!-- Dest Hub Dropdown -->
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface cursor-pointer hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-outline">hub</span>
+<span>Destination: <strong>All Hubs</strong></span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</div>
+<!-- Class Dropdown -->
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface cursor-pointer hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-outline">thermostat</span>
+<span>Class: <strong>Cold-Chain (2-8°C)</strong></span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</div>
+<!-- Status Dropdown -->
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface cursor-pointer hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px] text-primary">task_alt</span>
+<span>Gate: <strong>All Passed</strong></span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</div>
+</div>
+<!-- Right Action Cluster -->
+<div class="flex items-center gap-space-xs shrink-0 pt-2 lg:pt-0">
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+        Export CSV
+      </button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+        Send to WMS / SAP S/4
+      </button>
+</div>
+</div>
+<!-- Primary Allocation Plan Data Grid -->
+<div class="bg-surface-container-lowest rounded shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-left">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold">Gate</th>
+<th class="py-2.5 px-space-sm font-semibold">Origin DC</th>
+<th class="py-2.5 px-space-sm font-semibold">Batch &amp; Expiry</th>
+<th class="py-2.5 px-space-sm font-semibold">SKU Code &amp; Description</th>
+<th class="py-2.5 px-space-sm font-semibold">Destination Hub</th>
+<th class="py-2.5 px-space-sm font-semibold text-right">Allocated Qty</th>
+<th class="py-2.5 px-space-sm font-semibold">Transit &amp; ETA</th>
+<th class="py-2.5 px-space-sm font-semibold">Shelf Life @ Arr</th>
+<th class="py-2.5 px-space-sm font-semibold text-right">Freight &amp; Mode</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Audit</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Row 1: Selected / Highlighted High-Priority Item -->
+<tr class="bg-surface-container-low/70 hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-East-02</span>
+<span class="text-outline text-[11px]">Newark Port, NJ</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-A89</span>
+<span class="text-outline text-[11px]">Exp: 2025-07-15</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-primary">SKU-9921-X</span>
+<span class="px-1 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-code text-[10px]">2-8°C</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Cold-Chain Reagent Pack v3 (Enzyme Mix)">Cold-Chain Reagent Pack v3</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-East-01</span>
+<span class="text-outline text-[11px]">Allentown, PA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-bold text-primary text-[13px] bg-primary-fixed/20 px-1.5 py-0.5 rounded">+1,200 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">18 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 15, 08:30 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">61 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">SLA &gt;30d</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$1,420</span>
+<span class="text-outline text-[10px]">Reefer LTL</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container-highest/60 hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-Cent-04</span>
+<span class="text-outline text-[11px]">Columbus, OH</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-C12</span>
+<span class="text-outline text-[11px]">Exp: 2025-06-02</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">SKU-4410-B</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-on-surface font-code text-[10px]">AMB</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Saline Buffer Solution 500ml IV Grade">Saline Buffer 500ml IV</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-NY-04</span>
+<span class="text-outline text-[11px]">Queens Depot, NY</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-semibold text-on-surface text-[13px]">+2,400 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">22 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 15, 14:00 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-error">18.5 Days</span>
+<span class="px-1 py-0.2 rounded bg-error-container text-on-error-container font-code text-[10px]">FEFO Warn</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$840</span>
+<span class="text-outline text-[10px]">Dry FTL</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-South-01</span>
+<span class="text-outline text-[11px]">Atlanta, GA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-F04</span>
+<span class="text-outline text-[11px]">Exp: 2025-11-20</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">SKU-7720-C</span>
+<span class="px-1 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-code text-[10px]">-20°C</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Cryogenic Stem Cell Vials (Gamma Sterilized)">Cryogenic Vials 2.0ml</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-BOS-02</span>
+<span class="text-outline text-[11px]">Logan Medical, MA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-semibold text-on-surface text-[13px]">+850 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">26 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 16, 04:15 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">189 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">Optimal</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$2,190</span>
+<span class="text-outline text-[10px]">Cryo Express</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-East-01</span>
+<span class="text-outline text-[11px]">Allentown, PA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-E99</span>
+<span class="text-outline text-[11px]">Exp: 2026-01-10</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">SKU-1088-P</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-on-surface font-code text-[10px]">AMB</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="N95 Surgical Respirators Pack of 50">Surgical Respirators N95</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-PHL-01</span>
+<span class="text-outline text-[11px]">Penn Hub, PA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-semibold text-on-surface text-[13px]">+5,000 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">6 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 14, 18:00 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">240 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">Optimal</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$310</span>
+<span class="text-outline text-[10px]">Local Courier</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-Midw-02</span>
+<span class="text-outline text-[11px]">Chicago O'Hare, IL</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-R41</span>
+<span class="text-outline text-[11px]">Exp: 2025-08-30</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-primary">SKU-9921-X</span>
+<span class="px-1 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-code text-[10px]">2-8°C</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Cold-Chain Reagent Pack v3 (Enzyme Mix)">Cold-Chain Reagent Pack v3</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-DTW-01</span>
+<span class="text-outline text-[11px]">Metro Detroit, MI</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-bold text-primary text-[13px] bg-primary-fixed/20 px-1.5 py-0.5 rounded">+950 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">12 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 15, 02:00 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">107 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">Optimal</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$1,150</span>
+<span class="text-outline text-[10px]">Reefer Dedicated</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-South-02</span>
+<span class="text-outline text-[11px]">Memphis Hub, TN</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-M09</span>
+<span class="text-outline text-[11px]">Exp: 2025-07-01</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">SKU-3120-K</span>
+<span class="px-1 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-code text-[10px]">2-8°C</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Diagnostic Immunoassay Cartridges">Immunoassay Assay Cartridge</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-MIA-03</span>
+<span class="text-outline text-[11px]">Miami South, FL</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-semibold text-on-surface text-[13px]">+1,600 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">20 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 15, 11:30 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">47 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">SLA &gt;30d</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$1,780</span>
+<span class="text-outline text-[10px]">Reefer Shared</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-2.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[11px] font-bold">
+<span class="material-symbols-outlined text-[12px]">verified</span> PASSED
+              </span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">DC-West-01</span>
+<span class="text-outline text-[11px]">Reno Nevada, NV</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code font-semibold text-on-surface">LOT-2025-W88</span>
+<span class="text-outline text-[11px]">Exp: 2025-10-15</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">SKU-6502-D</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-on-surface font-code text-[10px]">AMB</span>
+</div>
+<span class="text-on-surface-variant truncate max-w-[210px]" title="Sterile Pipette Tips 200uL Box">Pipette Tips 200uL Box</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface font-code">HUB-SEA-01</span>
+<span class="text-outline text-[11px]">Seattle Port, WA</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<span class="font-code font-semibold text-on-surface text-[13px]">+3,200 u</span>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-code text-on-surface">15 hrs</span>
+<span class="text-outline text-[11px]">ETA: May 15, 05:00 UTC</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="font-code font-bold text-on-surface">154 Days</span>
+<span class="px-1 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px]">Optimal</span>
+</div>
+</td>
+<td class="py-2.5 px-space-sm whitespace-nowrap text-right">
+<div class="flex flex-col items-end">
+<span class="font-code font-medium text-on-surface">$920</span>
+<span class="text-outline text-[10px]">Standard FTL</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md whitespace-nowrap text-center">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors">
+                Trace
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Summary Footer -->
+<div class="p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface">Showing 7 of 142 Optimized Dispatches</span>
+<span class="text-outline-variant">•</span>
+<span>Total Rebalanced Volume: <strong class="text-on-surface font-code">46,820 units</strong></span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-outline hover:text-on-surface disabled:opacity-40" disabled="">Previous</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-bold">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">12</button>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- Interactive Solver Trace / Deep Inspection Panel for Priority Transfer (SKU-9921-X) -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-md gap-space-sm border-b border-surface-container-high/40">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Solver Trace: Priority Dispatch Inspection</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-code text-[10px] font-bold uppercase">FEFO PRESERVATION RANK 1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-code">
+            Transfer ID: <strong class="text-on-surface">DSP-2025-05-9921X</strong> | Batch: LOT-2025-A89 | SKU-9921-X
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="text-outline">MILP Objective Contribution:</span>
+<span class="font-code font-bold text-primary">-$48,420 Margin Preserved</span>
+</div>
+</div>
+<!-- Trace Details Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg pt-space-md">
+<!-- Route & Temperature Assurance Column -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">route</span>
+          Origin to Destination Corridor
+        </span>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Origin Facility:</span>
+<span class="font-code font-semibold text-on-surface">DC-East-02 (Newark)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Destination Hub:</span>
+<span class="font-code font-semibold text-on-surface">DC-East-01 (Allentown)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Physical Distance / Transit:</span>
+<span class="font-code text-on-surface">94 Miles / 18.2 Hours Buffer</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Cold-Chain Carrier:</span>
+<span class="font-code text-on-surface">PolarLogix Dedicated Reefer #41</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Temp Specification:</span>
+<span class="font-code text-primary font-bold">2.0°C – 7.8°C Monitored</span>
+</div>
+</div>
+</div>
+<!-- FEFO & Stockout Prevention Vector -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">trending_up</span>
+          Stockout Prevention Vector
+        </span>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>DC-East-01 Pre-Dispatch Stock:</span>
+<span class="font-code font-bold text-error">42 units (Stockout in 14h)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Hospital Surge Demand (Day 2-5):</span>
+<span class="font-code text-on-surface">1,180 units projected</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Post-Arrival Stock Level:</span>
+<span class="font-code font-bold text-primary">1,242 units (6.8 Days Coverage)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Salvaged Margin vs Stockout:</span>
+<span class="font-code text-on-surface font-semibold">$52,800 gross</span>
+</div>
+<div class="flex items-center justify-between">
+<span>FEFO Shelf-Life Margin:</span>
+<span class="font-code text-on-surface">61.0 Days remaining (&gt;30d gate)</span>
+</div>
+</div>
+</div>
+<!-- Independent Safety Validator Proof -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-tertiary">gavel</span>
+          Deterministic Auditor Verdict
+        </span>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Origin Inventory Balance ≥ 0:</span>
+<span class="font-code text-primary font-bold">PASS (Residual: +340u)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Dock Staging Bay Availability:</span>
+<span class="font-code text-primary font-bold">PASS (Dock 12 Reserved)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Driver Hours of Service SLA:</span>
+<span class="font-code text-primary font-bold">PASS (Single shift compliant)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>FEFO Arrival SLA &gt; Threshold:</span>
+<span class="font-code text-primary font-bold">PASS (61d &gt; 30d baseline)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>WMS EDI Handshake Status:</span>
+<span class="font-code text-primary font-bold">READY (EDI-856 Formatted)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation & Workflow Completion Bar -->
+<div class="sticky bottom-0 bg-surface-container-lowest border-t border-surface-container-high/40 p-space-md rounded-t shadow-lg flex flex-col sm:flex-row items-center justify-between gap-space-md z-30">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-sm text-label-sm font-bold">
+        3
+      </div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Stage 3 of 5 Complete: Allocation Plan Verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ready to examine fine-grained transfer recommendations or commit to execution.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-3 py-1.5 rounded bg-surface-container-low text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+        Risk Overview
+      </button>
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">description</span>
+        Export Dispatch Manifest
+      </button>
+<button class="px-4 py-1.5 rounded bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span>Proceed to Recommendation Detail</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>
